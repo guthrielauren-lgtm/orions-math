@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiIHdpZHRoPSIxMDI0IiBoZWlnaHQ9IjEwMjQiPgogIDxkZWZzPgogICAgPCEtLSBTa3kgZ3JhZGllbnQgYmFja2dyb3VuZCAtLT4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmdHcmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzBmN2JjNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjU1JSIgc3R5bGU9InN0b3AtY29sb3I6IzFhOWZkNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMyZWNjNzEiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8IS0tIEdyb3VuZCBncmFkaWVudCAtLT4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ3JvdW5kR3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMmVjYzcxIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzFhN2E0MiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwhLS0gWWVsbG93IGdsb3cgZm9yIHN0YXIgLS0+CiAgICA8cmFkaWFsR3JhZGllbnQgaWQ9InN0YXJHbG93IiBjeD0iNTAlIiBjeT0iNTAlIiByPSI1MCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZmZlOTRkO3N0b3Atb3BhY2l0eTowLjYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZjFjNDBmO3N0b3Atb3BhY2l0eTowIi8+CiAgICA8L3JhZGlhbEdyYWRpZW50PgogICAgPCEtLSBTaGllbGQgZ3JhZGllbnQgLS0+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InNoaWVsZEdyYWQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZjFjNDBmIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2U2N2UyMiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwhLS0gRHJvcCBzaGFkb3cgZmlsdGVyIC0tPgogICAgPGZpbHRlciBpZD0ic2hhZG93IiB4PSItMjAlIiB5PSItMjAlIiB3aWR0aD0iMTQwJSIgaGVpZ2h0PSIxNDAlIj4KICAgICAgPGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjYiIHN0ZERldmlhdGlvbj0iMTAiIGZsb29kLWNvbG9yPSJyZ2JhKDAsMCwwLDAuNCkiLz4KICAgIDwvZmlsdGVyPgogICAgPGZpbHRlciBpZD0ic29mdFNoYWRvdyIgeD0iLTEwJSIgeT0iLTEwJSIgd2lkdGg9IjEyMCUiIGhlaWdodD0iMTIwJSI+CiAgICAgIDxmZURyb3BTaGFkb3cgZHg9IjAiIGR5PSIzIiBzdGREZXZpYXRpb249IjYiIGZsb29kLWNvbG9yPSJyZ2JhKDAsMCwwLDAuMykiLz4KICAgIDwvZmlsdGVyPgogIDwvZGVmcz4KCiAgPCEtLSBSb3VuZGVkIHNxdWFyZSBiYWNrZ3JvdW5kIC0tPgogIDxyZWN0IHdpZHRoPSIxMDI0IiBoZWlnaHQ9IjEwMjQiIHJ4PSIyMzAiIHJ5PSIyMzAiIGZpbGw9InVybCgjYmdHcmFkKSIvPgoKICA8IS0tIEdyb3VuZCBzdHJpcCAtLT4KICA8cmVjdCB4PSIwIiB5PSI3NTAiIHdpZHRoPSIxMDI0IiBoZWlnaHQ9IjI3NCIgcng9IjAiIGZpbGw9InVybCgjZ3JvdW5kR3JhZCkiLz4KICA8cmVjdCB4PSIwIiB5PSI3NTAiIHdpZHRoPSIxMDI0IiBoZWlnaHQ9IjI3NCIgcng9IjAiIHJ5PSIwIiBmaWxsPSJub25lIi8+CiAgPCEtLSBTbW9vdGggZ3JvdW5kIGN1cnZlIC0tPgogIDxlbGxpcHNlIGN4PSI1MTIiIGN5PSI3NTAiIHJ4PSI2MDAiIHJ5PSI2MCIgZmlsbD0idXJsKCNncm91bmRHcmFkKSIvPgoKICA8IS0tIEdvYWwgcG9zdCAoc2ltcGxpZmllZCwgYmVoaW5kIGRpbm8pIC0tPgogIDwhLS0gTGVmdCBwb3N0IC0tPgogIDxyZWN0IHg9IjE2MCIgeT0iNDgwIiB3aWR0aD0iMjIiIGhlaWdodD0iMjgwIiByeD0iMTEiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiIGZpbHRlcj0idXJsKCNzb2Z0U2hhZG93KSIvPgogIDwhLS0gUmlnaHQgcG9zdCAtLT4KICA8cmVjdCB4PSI2NDAiIHk9IjQ4MCIgd2lkdGg9IjIyIiBoZWlnaHQ9IjI4MCIgcng9IjExIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC45IiBmaWx0ZXI9InVybCgjc29mdFNoYWRvdykiLz4KICA8IS0tIENyb3NzYmFyIC0tPgogIDxyZWN0IHg9IjE2MCIgeT0iNDgwIiB3aWR0aD0iNTAyIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiIGZpbHRlcj0idXJsKCNzb2Z0U2hhZG93KSIvPgogIDwhLS0gTmV0IGxpbmVzIGhvcml6b250YWwgLS0+CiAgPGxpbmUgeDE9IjE2MiIgeTE9IjU0NSIgeDI9IjY2MCIgeTI9IjU0NSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMzUpIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8bGluZSB4MT0iMTYyIiB5MT0iNjEwIiB4Mj0iNjYwIiB5Mj0iNjEwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4zNSkiIHN0cm9rZS13aWR0aD0iNCIvPgogIDxsaW5lIHgxPSIxNjIiIHkxPSI2NzUiIHgyPSI2NjAiIHkyPSI2NzUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjM1KSIgc3Ryb2tlLXdpZHRoPSI0Ii8+CiAgPCEtLSBOZXQgbGluZXMgdmVydGljYWwgLS0+CiAgPGxpbmUgeDE9IjI0OCIgeTE9IjUwMiIgeDI9IjI0OCIgeTI9Ijc1MiIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMzUpIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8bGluZSB4MT0iMzM2IiB5MT0iNTAyIiB4Mj0iMzM2IiB5Mj0iNzUyIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4zNSkiIHN0cm9rZS13aWR0aD0iNCIvPgogIDxsaW5lIHgxPSI0MjQiIHkxPSI1MDIiIHgyPSI0MjQiIHkyPSI3NTIiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjM1KSIgc3Ryb2tlLXdpZHRoPSI0Ii8+CiAgPGxpbmUgeDE9IjUxMiIgeTE9IjUwMiIgeDI9IjUxMiIgeTI9Ijc1MiIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMzUpIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8bGluZSB4MT0iNTczIiB5MT0iNTAyIiB4Mj0iNTczIiB5Mj0iNzUyIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4zNSkiIHN0cm9rZS13aWR0aD0iNCIvPgoKICA8IS0tIOKUgOKUgCBESU5PIENIQVJBQ1RFUiDilIDilIAgLS0+CiAgPCEtLSBCb2R5IC0gYmlnIGZyaWVuZGx5IHJvdW5kZWQgc2hhcGUgLS0+CiAgPGVsbGlwc2UgY3g9IjQyMCIgY3k9IjYwMCIgcng9IjE2NSIgcnk9IjE4NSIgZmlsbD0iIzI3YWU2MCIgZmlsdGVyPSJ1cmwoI3NoYWRvdykiLz4KICA8IS0tIEJlbGx5IC0tPgogIDxlbGxpcHNlIGN4PSI0MTUiIGN5PSI2MzAiIHJ4PSI5NSIgcnk9IjExNSIgZmlsbD0iIzUyZDY4YSIvPgogIDwhLS0gVGFpbCAtLT4KICA8cGF0aCBkPSJNIDU2MCA2ODAgUSA2ODAgNzIwIDcyMCA4MDAgUSA3MDAgNzUwIDY0MCA3MzAgUSA2MjAgNzAwIDU3MCA2OTAgWiIgZmlsbD0iIzI3YWU2MCIvPgogIDwhLS0gVGFpbCB0aXAgLS0+CiAgPGVsbGlwc2UgY3g9IjcxOCIgY3k9IjgwMCIgcng9IjIyIiByeT0iMTgiIGZpbGw9IiMxYTllNTUiLz4KCiAgPCEtLSBCYWNrIHNwaWtlcyAtLT4KICA8cG9seWdvbiBwb2ludHM9IjMyMCw0MzAgMjk1LDM2MCAzNDUsNDEwIiBmaWxsPSIjMWE5ZTU1Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIzNjUsNDA1IDM1MCwzMzAgMzkwLDM5NSIgZmlsbD0iIzFhOWU1NSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNDEyLDM5NSA0MDgsMzE1IDQ0MCwzODgiIGZpbGw9IiMxYTllNTUiLz4KICA8cG9seWdvbiBwb2ludHM9IjQ1OCw0MDAgNDYyLDMyMCA0ODUsMzk2IiBmaWxsPSIjMWE5ZTU1Ii8+CgogIDwhLS0gTmVjayAtLT4KICA8ZWxsaXBzZSBjeD0iMzU1IiBjeT0iNDcwIiByeD0iODAiIHJ5PSI5NSIgZmlsbD0iIzI3YWU2MCIvPgoKICA8IS0tIEhlYWQgLS0+CiAgPGVsbGlwc2UgY3g9IjI5NSIgY3k9IjM2MCIgcng9IjEyMCIgcnk9IjEwMCIgZmlsbD0iIzJlY2M3MSIgZmlsdGVyPSJ1cmwoI3NoYWRvdykiLz4KICA8IS0tIEhlYWQgaGlnaGxpZ2h0IC0tPgogIDxlbGxpcHNlIGN4PSIyNzAiIGN5PSIzMzAiIHJ4PSI1NSIgcnk9IjQwIiBmaWxsPSIjNTJkNjhhIiBvcGFjaXR5PSIwLjUiLz4KCiAgPCEtLSBTbm91dCAtLT4KICA8ZWxsaXBzZSBjeD0iMjEwIiBjeT0iMzkwIiByeD0iNzUiIHJ5PSI1MiIgZmlsbD0iIzJlY2M3MSIvPgogIDwhLS0gU25vdXQgdW5kZXJzaWRlIC0tPgogIDxlbGxpcHNlIGN4PSIyMTAiIGN5PSI0MDgiIHJ4PSI2NSIgcnk9IjMyIiBmaWxsPSIjNTJkNjhhIi8+CgogIDwhLS0gTm9zdHJpbCAtLT4KICA8ZWxsaXBzZSBjeD0iMTg4IiBjeT0iMzc4IiByeD0iMTAiIHJ5PSI4IiBmaWxsPSIjMWE5ZTU1Ii8+CiAgPGVsbGlwc2UgY3g9IjIxNSIgY3k9IjM3NCIgcng9IjEwIiByeT0iOCIgZmlsbD0iIzFhOWU1NSIvPgoKICA8IS0tIEJpZyBleWUgd2hpdGUgLS0+CiAgPGVsbGlwc2UgY3g9IjI4NSIgY3k9IjMzNSIgcng9IjQyIiByeT0iNDIiIGZpbGw9IndoaXRlIiBmaWx0ZXI9InVybCgjc29mdFNoYWRvdykiLz4KICA8IS0tIElyaXMgLS0+CiAgPGVsbGlwc2UgY3g9IjI4MiIgY3k9IjMzNyIgcng9IjI4IiByeT0iMzAiIGZpbGw9IiMxYTI1MzMiLz4KICA8IS0tIFB1cGlsIHNoaW5lIC0tPgogIDxlbGxpcHNlIGN4PSIyNzMiIGN5PSIzMjciIHJ4PSIxMCIgcnk9IjExIiBmaWxsPSJ3aGl0ZSIvPgogIDwhLS0gRXllIHNoaW5lIHNtYWxsIC0tPgogIDxlbGxpcHNlIGN4PSIyOTAiIGN5PSIzNDQiIHJ4PSI1IiByeT0iNSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuNiIvPgoKICA8IS0tIFNtaWxlIC0tPgogIDxwYXRoIGQ9Ik0gMTY4IDQwNSBRIDIwMCA0MzIgMjQ1IDQyMCIgc3Ryb2tlPSIjMWE3YTQyIiBzdHJva2Utd2lkdGg9IjYiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgoKICA8IS0tIFRlZXRoIC0tPgogIDxyZWN0IHg9IjE3OCIgeT0iNDA3IiB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHJ4PSIzIiBmaWxsPSJ3aGl0ZSIvPgogIDxyZWN0IHg9IjE5OCIgeT0iNDEwIiB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHJ4PSIzIiBmaWxsPSJ3aGl0ZSIvPgogIDxyZWN0IHg9IjIxOCIgeT0iNDExIiB3aWR0aD0iMTQiIGhlaWdodD0iMTMiIHJ4PSIzIiBmaWxsPSJ3aGl0ZSIvPgoKICA8IS0tIExlZnQgYXJtIChyYWlzZWQsIGFib3V0IHRvIGtpY2spIC0tPgogIDxlbGxpcHNlIGN4PSIyNzAiIGN5PSI1NjUiIHJ4PSIzNSIgcnk9IjU1IiBmaWxsPSIjMjdhZTYwIiB0cmFuc2Zvcm09InJvdGF0ZSgtMzAgMjcwIDU2NSkiLz4KICA8IS0tIEhhbmQvY2xhdyAtLT4KICA8ZWxsaXBzZSBjeD0iMjQ4IiBjeT0iNTIyIiByeD0iMjgiIHJ5PSIyMiIgZmlsbD0iIzJlY2M3MSIvPgogIDxwYXRoIGQ9Ik0gMjM1IDUxMCBRIDI0MCA0OTAgMjUwIDUxMCIgc3Ryb2tlPSIjMWE5ZTU1IiBzdHJva2Utd2lkdGg9IjUiIGZpbGw9Im5vbmUiLz4KICA8cGF0aCBkPSJNIDI1MCA1MDcgUSAyNTggNDg3IDI2MiA1MDgiIHN0cm9rZT0iIzFhOWU1NSIgc3Ryb2tlLXdpZHRoPSI1IiBmaWxsPSJub25lIi8+CgogIDwhLS0gUmlnaHQgbGVnIChraWNraW5nISkgLS0+CiAgPGVsbGlwc2UgY3g9IjU0MCIgY3k9IjcxMCIgcng9IjQwIiByeT0iNjUiIGZpbGw9IiMyN2FlNjAiIHRyYW5zZm9ybT0icm90YXRlKDI1IDU0MCA3MTApIi8+CiAgPCEtLSBGb290IC0tPgogIDxlbGxpcHNlIGN4PSI1NzUiIGN5PSI3NTUiIHJ4PSI0NSIgcnk9IjI4IiBmaWxsPSIjMmVjYzcxIi8+CgogIDwhLS0gTGVmdCBsZWcgKHN0YW5kaW5nKSAtLT4KICA8ZWxsaXBzZSBjeD0iMzcwIiBjeT0iNzU1IiByeD0iMzgiIHJ5PSI1NSIgZmlsbD0iIzI3YWU2MCIvPgogIDwhLS0gTGVmdCBmb290IC0tPgogIDxlbGxpcHNlIGN4PSIzNjAiIGN5PSI3OTAiIHJ4PSI0OCIgcnk9IjI2IiBmaWxsPSIjMmVjYzcxIi8+CgogIDwhLS0g4pSA4pSAIFNPQ0NFUiBCQUxMIChiZWluZyBraWNrZWQpIOKUgOKUgCAtLT4KICA8Y2lyY2xlIGN4PSI3MTAiIGN5PSI2ODAiIHI9Ijc4IiBmaWxsPSJ3aGl0ZSIgZmlsdGVyPSJ1cmwoI3NoYWRvdykiLz4KICA8IS0tIEJhbGwgcGVudGFnb25zIC0tPgogIDxwb2x5Z29uIHBvaW50cz0iNzEwLDYxNSA3NDMsNjM3IDczMSw2NzMgNjg5LDY3MyA2NzcsNjM3IiBmaWxsPSIjMWEyNTMzIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI3MTAsNzQ1IDY3Nyw3MjMgNjg5LDY4NyA3MzEsNjg3IDc0Myw3MjMiIGZpbGw9IiMxYTI1MzMiIG9wYWNpdHk9IjAuNyIvPgogIDxwb2x5Z29uIHBvaW50cz0iNjQzLDY0NyA2NTYsNjExIDY3Nyw2MzcgNjYzLDY2OSA2MzUsNjYzIiBmaWxsPSIjMWEyNTMzIiBvcGFjaXR5PSIwLjciLz4KICA8cG9seWdvbiBwb2ludHM9Ijc3Nyw2NDcgNzY0LDYxMSA3NDMsNjM3IDc1Nyw2NjkgNzg1LDY2MyIgZmlsbD0iIzFhMjUzMyIgb3BhY2l0eT0iMC43Ii8+CiAgPCEtLSBCYWxsIHNoaW5lIC0tPgogIDxlbGxpcHNlIGN4PSI2ODgiIGN5PSI2NDUiIHJ4PSIyMiIgcnk9IjE2IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC41Ii8+CgogIDwhLS0g4pSA4pSAIFRJVExFIEJBTk5FUiDilIDilIAgLS0+CiAgPCEtLSBCYW5uZXIgYmFja2dyb3VuZCAtLT4KICA8cmVjdCB4PSI4MCIgeT0iOTAiIHdpZHRoPSI4NjQiIGhlaWdodD0iMTQ1IiByeD0iNzIiIGZpbGw9IiNmMWM0MGYiIGZpbHRlcj0idXJsKCNzaGFkb3cpIi8+CiAgPHJlY3QgeD0iODgiIHk9Ijk4IiB3aWR0aD0iODQ4IiBoZWlnaHQ9IjEyOSIgcng9IjY0IiBmaWxsPSIjZmZlOTRkIi8+CiAgPCEtLSBCYW5uZXIgaW5uZXIgc2hhZG93IGxpbmUgLS0+CiAgPHJlY3QgeD0iOTYiIHk9IjEwNiIgd2lkdGg9IjgzMiIgaGVpZ2h0PSI0IiByeD0iMiIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjYpIi8+CgogIDwhLS0gIk9SSU9OJ1MiIHRleHQgLS0+CiAgPHRleHQgeD0iNTEyIiB5PSIxNjgiIAogICAgZm9udC1mYW1pbHk9IidGcmVkb2thIE9uZScsICdBcmlhbCBSb3VuZGVkIE1UIEJvbGQnLCBBcmlhbCwgc2Fucy1zZXJpZiIKICAgIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI5MDAiCiAgICB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMWEyNTMzIgogICAgbGV0dGVyLXNwYWNpbmc9IjIiPk9SSU9OJ1M8L3RleHQ+CgogIDwhLS0g4pSA4pSAIE1BVEggU1lNQk9MUyBmbG9hdGluZyDilIDilIAgLS0+CiAgPCEtLSBQbHVzIHNpZ24gLSB0b3AgbGVmdCAtLT4KICA8dGV4dCB4PSIxMDUiIHk9IjMxMCIgZm9udC1mYW1pbHk9IidGcmVkb2thIE9uZScsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9Ijg4IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuODUpIiBmaWx0ZXI9InVybCgjc29mdFNoYWRvdykiPis8L3RleHQ+CiAgPCEtLSBNaW51cyBzaWduIC0gdG9wIHJpZ2h0IC0tPgogIDx0ZXh0IHg9Ijg0MCIgeT0iMjk1IiBmb250LWZhbWlseT0iJ0ZyZWRva2EgT25lJywgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iODgiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC44NSkiIGZpbHRlcj0idXJsKCNzb2Z0U2hhZG93KSI+4oiSPC90ZXh0PgoKICA8IS0tIOKUgOKUgCBTVEFSIGJhZGdlIGJvdHRvbSBjZW50ZXIg4pSA4pSAIC0tPgogIDwhLS0gU3RhciBnbG93IC0tPgogIDxjaXJjbGUgY3g9IjUxMiIgY3k9Ijg3NSIgcj0iODAiIGZpbGw9InVybCgjc3Rhckdsb3cpIi8+CiAgPCEtLSBTdGFyIHNoYXBlIC0tPgogIDxwb2x5Z29uIHBvaW50cz0iNTEyLDgyMCA1MjYsODYwIDU3MCw4NjAgNTM2LDg4NCA1NDksOTI0IDUxMiw5MDEgNDc1LDkyNCA0ODgsODg0IDQ1NCw4NjAgNDk4LDg2MCIKICAgIGZpbGw9IiNmMWM0MGYiIGZpbHRlcj0idXJsKCNzaGFkb3cpIi8+CiAgPCEtLSBTdGFyIHNoaW5lIC0tPgogIDxwb2x5Z29uIHBvaW50cz0iNTEyLDgyOCA1MjIsODU2IDU0OCw4NTYgNTI3LDg3MiA1MzUsOTAwIDUxMiw4ODUgNDg5LDkwMCA0OTcsODcyIDQ3Niw4NTYgNTAyLDg1NiIKICAgIGZpbGw9IiNmZmU5NGQiIG9wYWNpdHk9IjAuNiIvPgoKICA8IS0tIOKUgOKUgCBCT1RUT00gIk1BVEgiIGxhYmVsIOKUgOKUgCAtLT4KICA8cmVjdCB4PSIzNDAiIHk9IjkzNSIgd2lkdGg9IjM0NCIgaGVpZ2h0PSI2OCIgcng9IjM0IiBmaWxsPSJyZ2JhKDAsMCwwLDAuMykiLz4KICA8dGV4dCB4PSI1MTIiIHk9Ijk4MiIKICAgIGZvbnQtZmFtaWx5PSInRnJlZG9rYSBPbmUnLCAnQXJpYWwgUm91bmRlZCBNVCBCb2xkJywgQXJpYWwsIHNhbnMtc2VyaWYiCiAgICBmb250LXNpemU9IjUyIiBmb250LXdlaWdodD0iOTAwIgogICAgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiCiAgICBsZXR0ZXItc3BhY2luZz0iMyI+TUFUSCEg4pq9PC90ZXh0Pgo8L3N2Zz4K">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Orion's Math">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Orion's Dino Math Adventure!</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --yellow:#f1c40f; --yellow-dark:#c0840a;
+  --green:#2ecc71; --green-dark:#1a7a42;
+  --sky:#1a9fd4; --red:#e74c3c; --white:#fff;
+  --dark:#1a2533; --shadow:0 8px 32px rgba(0,0,0,0.18);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Nunito',sans-serif;min-height:100vh;overflow-x:hidden;background:#0f7bc4;}
+
+/* ─── SCREENS ─── */
+.screen{display:none;min-height:100vh;flex-direction:column;align-items:center;justify-content:center;padding:20px 16px;position:relative;z-index:1;}
+.screen.active{display:flex;}
+
+/* ─── SHARED COMPONENTS ─── */
+.btn{font-family:'Fredoka One',cursive;font-size:1.4rem;color:var(--dark);background:linear-gradient(145deg,var(--yellow),#f39c12);border:none;border-radius:50px;padding:16px 44px;cursor:pointer;transition:all .18s;box-shadow:0 6px 0 var(--yellow-dark),0 8px 20px rgba(0,0,0,.2);touch-action:manipulation;}
+.btn:hover{transform:translateY(-3px);box-shadow:0 9px 0 var(--yellow-dark),0 12px 24px rgba(0,0,0,.25);}
+.btn:active{transform:translateY(3px);box-shadow:0 3px 0 var(--yellow-dark);}
+.btn-green{background:linear-gradient(145deg,#2ecc71,#1a9e55);color:#fff;box-shadow:0 6px 0 #116a38,0 8px 20px rgba(0,0,0,.2);}
+.btn-green:hover{box-shadow:0 9px 0 #116a38,0 12px 24px rgba(0,0,0,.25);}
+.btn-green:active{box-shadow:0 3px 0 #116a38;}
+.btn-ghost{background:rgba(255,255,255,.2);color:#fff;box-shadow:none;font-size:1rem;padding:11px 26px;}
+.btn-ghost:hover{background:rgba(255,255,255,.3);transform:translateY(-2px);}
+.btn-ghost:active{transform:translateY(1px);}
+.btn-sm{font-size:1rem;padding:11px 28px;}
+.section-title{font-family:'Fredoka One',cursive;font-size:1.5rem;color:#fff;text-shadow:2px 2px 0 rgba(0,0,0,.3);text-align:center;}
+.card{background:#fff;border-radius:20px;padding:22px 20px;box-shadow:var(--shadow);}
+
+/* ─── TITLE SCREEN ─── */
+#screen-title{gap:14px;text-align:center;background:linear-gradient(160deg,#0f7bc4 0%,#1a9fd4 50%,#2ecc71 100%);}
+#screen-title::before{content:'';position:fixed;bottom:-60px;left:-60px;right:-60px;height:200px;background:#1a7a42;border-radius:50% 50% 0 0/80px 80px 0 0;z-index:0;}
+.title-dino{font-size:6rem;animation:bounce 1.2s ease-in-out infinite;filter:drop-shadow(0 8px 16px rgba(0,0,0,.3));line-height:1;position:relative;z-index:1;}
+@keyframes bounce{0%,100%{transform:translateY(0) rotate(-3deg);}50%{transform:translateY(-16px) rotate(3deg);}}
+.title-main{font-family:'Fredoka One',cursive;font-size:clamp(2.2rem,9vw,4rem);color:#fff;text-shadow:3px 3px 0 var(--green-dark),6px 6px 0 rgba(0,0,0,.2);line-height:1.1;position:relative;z-index:1;}
+.title-main span{color:var(--yellow);}
+.title-sub{font-size:1.05rem;color:rgba(255,255,255,.9);font-weight:700;position:relative;z-index:1;}
+.title-btn-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;position:relative;z-index:1;}
+
+/* ─── WORLD MAP SCREEN ─── */
+#screen-map{padding:0;justify-content:flex-start;background:#1a6b3c;}
+.map-header{width:100%;background:rgba(0,0,0,.3);padding:12px 20px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;z-index:10;}
+.map-header-title{font-family:'Fredoka One',cursive;font-size:1.3rem;color:var(--yellow);}
+.map-header-right{display:flex;gap:8px;align-items:center;}
+
+/* The actual scrollable map canvas */
+.map-scroll{width:100%;overflow-y:auto;overflow-x:hidden;flex:1;position:relative;}
+.map-canvas{position:relative;width:100%;min-height:900px;}
+
+/* SVG path layer */
+.map-svg{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;}
+
+/* World nodes */
+.world-node{position:absolute;display:flex;flex-direction:column;align-items:center;cursor:pointer;z-index:5;transition:transform .2s;}
+.world-node:hover .world-island{transform:scale(1.06);}
+.world-island{width:100px;height:100px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:3rem;border:5px solid rgba(255,255,255,.5);box-shadow:0 8px 24px rgba(0,0,0,.35),inset 0 2px 0 rgba(255,255,255,.3);transition:transform .2s;position:relative;}
+.world-island.locked{filter:grayscale(.9) brightness(.5);cursor:default;}
+.world-island.locked::after{content:'🔒';position:absolute;font-size:1.8rem;bottom:-4px;right:-4px;}
+.world-island.current{box-shadow:0 0 0 5px var(--yellow),0 8px 24px rgba(0,0,0,.35),0 0 30px rgba(241,196,15,.6);}
+.world-name{font-family:'Fredoka One',cursive;font-size:.85rem;color:#fff;text-shadow:1px 1px 0 rgba(0,0,0,.5);margin-top:4px;text-align:center;max-width:110px;}
+.world-stars{font-size:.95rem;line-height:1;margin-top:2px;}
+.world-dino-marker{position:absolute;top:-28px;left:50%;transform:translateX(-50%);font-size:1.6rem;animation:markerBounce .8s ease-in-out infinite;filter:drop-shadow(0 2px 4px rgba(0,0,0,.4));}
+@keyframes markerBounce{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(-6px);}}
+
+/* Sessions-to-star progress under each node */
+.world-progress{display:flex;gap:3px;margin-top:3px;}
+.prog-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.3);border:1px solid rgba(255,255,255,.4);}
+.prog-dot.filled{background:var(--yellow);border-color:var(--yellow-dark);}
+
+/* ─── PLAY SCREEN (world selected) ─── */
+#screen-play{gap:12px;text-align:center;background:linear-gradient(160deg,#0f7bc4 0%,#1a9fd4 50%,#2ecc71 100%);}
+#screen-play::before{content:'';position:fixed;bottom:-60px;left:-60px;right:-60px;height:200px;background:#1a7a42;border-radius:50% 50% 0 0/80px 80px 0 0;z-index:0;}
+.play-world-badge{border-radius:20px;padding:8px 22px;font-family:'Fredoka One',cursive;font-size:1.1rem;color:#fff;box-shadow:var(--shadow);position:relative;z-index:1;}
+.play-info{font-size:.95rem;color:rgba(255,255,255,.85);font-weight:700;position:relative;z-index:1;}
+.slider-wrap{width:100%;max-width:420px;background:rgba(255,255,255,.15);border-radius:16px;padding:14px 18px;position:relative;z-index:1;}
+.slider-display{font-family:'Fredoka One',cursive;font-size:2.8rem;color:var(--yellow);text-align:center;text-shadow:2px 2px 0 rgba(0,0,0,.3);line-height:1;}
+.slider-label{font-family:'Fredoka One',cursive;font-size:.85rem;color:rgba(255,255,255,.8);text-align:center;margin-bottom:8px;letter-spacing:1px;}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:12px;border-radius:50px;background:rgba(255,255,255,.3);outline:none;cursor:pointer;}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:34px;height:34px;border-radius:50%;background:var(--yellow);cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.3);border:3px solid #fff;}
+input[type=range]::-moz-range-thumb{width:34px;height:34px;border-radius:50%;background:var(--yellow);cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.3);border:3px solid #fff;}
+.slider-ticks{display:flex;justify-content:space-between;margin-top:5px;}
+.slider-tick{font-family:'Fredoka One',cursive;font-size:.68rem;color:rgba(255,255,255,.6);}
+.session-goal-bar{width:100%;max-width:420px;background:rgba(255,255,255,.15);border-radius:14px;padding:10px 16px;position:relative;z-index:1;}
+.sgb-label{font-family:'Fredoka One',cursive;font-size:.85rem;color:rgba(255,255,255,.85);margin-bottom:6px;}
+.sgb-stars{display:flex;gap:6px;justify-content:center;}
+.sgb-star{font-size:1.8rem;filter:grayscale(1) brightness(.5);transition:all .3s;}
+.sgb-star.earned{filter:none;animation:starPop .4s cubic-bezier(.175,.885,.32,1.275);}
+@keyframes starPop{from{transform:scale(0) rotate(-15deg);}to{transform:scale(1) rotate(0);}}
+
+/* ─── GAME SCREEN ─── */
+#screen-game{gap:9px;justify-content:flex-start;padding-top:12px;background:linear-gradient(160deg,#0f7bc4 0%,#1a9fd4 50%,#2ecc71 100%);}
+#screen-game::before{content:'';position:fixed;bottom:-60px;left:-60px;right:-60px;height:200px;background:#1a7a42;border-radius:50% 50% 0 0/80px 80px 0 0;z-index:0;}
+.game-world-bar{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.18);border-radius:50px;padding:5px 14px;position:relative;z-index:1;}
+.gwb-icon{font-size:1.4rem;}
+.gwb-label{font-family:'Fredoka One',cursive;font-size:.85rem;color:#fff;letter-spacing:1px;}
+.gwb-accuracy{font-family:'Fredoka One',cursive;font-size:.8rem;color:var(--yellow);}
+.hud{display:flex;gap:7px;width:100%;max-width:540px;justify-content:center;position:relative;z-index:1;}
+.hud-box{background:rgba(255,255,255,.92);border-radius:12px;padding:5px 10px;text-align:center;flex:1;min-width:60px;box-shadow:var(--shadow);}
+.hud-label{font-family:'Fredoka One',cursive;font-size:.58rem;color:#999;letter-spacing:1px;text-transform:uppercase;}
+.hud-value{font-family:'Fredoka One',cursive;font-size:1.5rem;color:var(--dark);line-height:1.1;}
+.hud-value.streak{color:var(--red);}
+.timer-bar-wrap{width:100%;max-width:540px;height:15px;background:rgba(255,255,255,.3);border-radius:50px;overflow:hidden;box-shadow:inset 0 2px 6px rgba(0,0,0,.2);position:relative;z-index:1;}
+.timer-bar{height:100%;border-radius:50px;background:linear-gradient(90deg,#2ecc71,#f1c40f,#e74c3c);transition:width .1s linear;}
+.coach-wrap{display:flex;align-items:flex-end;gap:9px;max-width:540px;width:100%;position:relative;z-index:1;}
+.coach-dino{font-size:3rem;line-height:1;flex-shrink:0;animation:coachBob 2s ease-in-out infinite;filter:drop-shadow(0 4px 8px rgba(0,0,0,.3));}
+@keyframes coachBob{0%,100%{transform:rotate(-4deg) scale(1);}50%{transform:rotate(4deg) scale(1.05);}}
+.speech-bubble{background:#fff;border-radius:14px 14px 14px 4px;padding:9px 13px;font-size:.88rem;font-weight:800;color:var(--dark);box-shadow:var(--shadow);flex:1;min-height:42px;display:flex;align-items:center;}
+
+/* ─── VERTICAL EQUATION ─── */
+.question-card{background:#fff;border-radius:22px;padding:18px 26px 14px;text-align:right;width:100%;max-width:300px;box-shadow:0 12px 40px rgba(0,0,0,.2);position:relative;z-index:1;}
+.op-badge{position:absolute;top:-15px;left:50%;transform:translateX(-50%);font-family:'Fredoka One',cursive;font-size:.95rem;padding:4px 16px;border-radius:50px;box-shadow:0 4px 12px rgba(0,0,0,.2);white-space:nowrap;}
+.op-add{background:#2ecc71;color:#fff;}
+.op-sub{background:#e74c3c;color:#fff;}
+.eq-num{font-family:'Fredoka One',cursive;font-size:clamp(2.6rem,9vw,3.8rem);color:var(--dark);line-height:1.15;letter-spacing:1px;}
+.eq-row-op{display:flex;align-items:center;justify-content:flex-end;gap:11px;}
+.eq-operator{font-family:'Fredoka One',cursive;font-size:clamp(2.2rem,8vw,3.2rem);line-height:1;}
+.eq-operator.add{color:#2ecc71;}
+.eq-operator.sub{color:#e74c3c;}
+.eq-line{height:5px;background:linear-gradient(90deg,transparent,var(--dark));border-radius:4px;margin:5px 0 9px;}
+.eq-answer-row{display:flex;align-items:center;justify-content:flex-end;}
+.answer-input{font-family:'Fredoka One',cursive;font-size:clamp(2.2rem,8vw,3.2rem);width:150px;text-align:right;border:none;border-bottom:5px solid #ddd;padding:3px 3px 1px;color:var(--sky);background:transparent;outline:none;transition:border-color .2s;-moz-appearance:textfield;caret-color:transparent;}
+.answer-input::-webkit-outer-spin-button,.answer-input::-webkit-inner-spin-button{-webkit-appearance:none;}
+.answer-input.correct{border-bottom-color:var(--green);color:var(--green-dark);}
+.answer-input.wrong{border-bottom-color:var(--red);color:var(--red);animation:shake .4s;}
+@keyframes shake{0%,100%{transform:translateX(0);}20%{transform:translateX(-8px);}40%{transform:translateX(8px);}60%{transform:translateX(-6px);}80%{transform:translateX(6px);}}
+
+/* ─── NUMPAD ─── */
+.numpad{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;max-width:280px;width:100%;position:relative;z-index:1;}
+.numpad-btn{font-family:'Fredoka One',cursive;font-size:1.6rem;background:#fff;border:3px solid #e0e0e0;border-radius:13px;padding:12px;cursor:pointer;transition:all .12s;box-shadow:0 4px 0 #ccc;color:var(--dark);touch-action:manipulation;user-select:none;}
+.numpad-btn:hover{background:#f0f8ff;border-color:var(--sky);}
+.numpad-btn:active{transform:translateY(2px);box-shadow:0 2px 0 #ccc;}
+.numpad-btn.del{background:#fff0f0;border-color:#ffcccc;color:var(--red);}
+.numpad-btn.go{background:linear-gradient(145deg,#2ecc71,#1a9e55);border-color:#116a38;color:#fff;box-shadow:0 4px 0 #116a38;font-size:1rem;}
+.numpad-btn.go:active{box-shadow:0 2px 0 #116a38;}
+
+/* ─── FEEDBACK OVERLAY ─── */
+.feedback-overlay{position:fixed;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;gap:14px;z-index:100;pointer-events:none;}
+.feedback-overlay.show{display:flex;}
+.feedback-emoji{font-size:7rem;animation:popIn .4s cubic-bezier(.175,.885,.32,1.275);}
+.feedback-text{font-family:'Fredoka One',cursive;font-size:2.8rem;color:#fff;text-shadow:3px 3px 0 rgba(0,0,0,.3);animation:popIn .4s cubic-bezier(.175,.885,.32,1.275) .1s both;}
+@keyframes popIn{from{transform:scale(0) rotate(-10deg);opacity:0;}to{transform:scale(1) rotate(0);opacity:1;}}
+.feedback-overlay.correct-bg{background:rgba(46,204,113,.75);}
+.feedback-overlay.wrong-bg{background:rgba(231,76,60,.65);}
+
+/* Level toast */
+.level-toast{position:fixed;top:18px;left:50%;transform:translateX(-50%) translateY(-80px);background:var(--yellow);color:var(--dark);font-family:'Fredoka One',cursive;font-size:1.2rem;padding:11px 26px;border-radius:50px;box-shadow:0 8px 24px rgba(0,0,0,.3);z-index:150;transition:transform .4s cubic-bezier(.175,.885,.32,1.275);pointer-events:none;white-space:nowrap;}
+.level-toast.show{transform:translateX(-50%) translateY(0);}
+
+/* ─── PENALTY SHOOTOUT ─── */
+#screen-shootout{padding:0;justify-content:flex-start;overflow:hidden;}
+.shootout-bg{position:relative;width:100%;min-height:100vh;background:linear-gradient(180deg,#87CEEB 0%,#87CEEB 52%,#2d8a2d 52%,#1a5c1a 100%);display:flex;flex-direction:column;align-items:center;overflow:hidden;}
+.crowd{position:absolute;top:0;left:0;right:0;height:85px;background:linear-gradient(180deg,#1a1a2e,#16213e);overflow:hidden;}
+.crowd-row{display:flex;gap:2px;padding:3px 2px;animation:crowdWave 2s ease-in-out infinite;}
+.crowd-row:nth-child(2){animation-delay:.3s;}
+@keyframes crowdWave{0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);}}
+.crowd-person{font-size:1rem;line-height:1;}
+.shootout-title{font-family:'Fredoka One',cursive;font-size:clamp(1.6rem,6vw,2.6rem);color:var(--yellow);text-shadow:3px 3px 0 rgba(0,0,0,.5);text-align:center;margin-top:94px;z-index:2;}
+.shootout-subtitle{font-family:'Fredoka One',cursive;font-size:1rem;color:#fff;text-shadow:1px 1px 0 rgba(0,0,0,.5);z-index:2;margin-top:3px;}
+.unlock-badge{background:var(--yellow);color:var(--dark);font-family:'Fredoka One',cursive;font-size:.95rem;padding:5px 18px;border-radius:50px;margin-top:5px;z-index:2;animation:recordPulse .6s ease-in-out infinite alternate;box-shadow:0 4px 16px rgba(241,196,15,.6);}
+@keyframes recordPulse{from{transform:scale(1);}to{transform:scale(1.06);}}
+.goal-arena{position:relative;width:100%;max-width:600px;display:flex;flex-direction:column;align-items:center;margin-top:8px;z-index:2;}
+.goal-net{position:relative;width:min(480px,88vw);height:min(240px,44vw);border:8px solid #fff;border-bottom:none;background:repeating-linear-gradient(90deg,rgba(255,255,255,.14) 0,rgba(255,255,255,.14) 1px,transparent 1px,transparent 28px),repeating-linear-gradient(0deg,rgba(255,255,255,.14) 0,rgba(255,255,255,.14) 1px,transparent 1px,transparent 28px);box-shadow:inset 0 0 28px rgba(0,0,0,.35),0 0 0 4px rgba(255,255,255,.3);border-radius:6px 6px 0 0;overflow:hidden;}
+.goal-zones{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:2px;padding:4px;}
+.goal-zone{border-radius:6px;cursor:pointer;border:3px dashed transparent;transition:all .15s;display:flex;align-items:center;justify-content:center;font-size:2rem;opacity:0;}
+.goal-zone:hover{background:rgba(255,255,255,.25);border-color:rgba(255,255,255,.6);opacity:1;}
+.goal-zones.picking .goal-zone{opacity:.3;}
+.goal-zones.picking .goal-zone:hover{opacity:1;}
+.goal-zones.locked .goal-zone{pointer-events:none;}
+.goalie{position:absolute;bottom:4px;left:50%;transform:translateX(-50%);font-size:min(6rem,11vw);line-height:1;transition:all .4s cubic-bezier(.175,.885,.32,1.275);filter:drop-shadow(0 6px 12px rgba(0,0,0,.5));z-index:5;}
+.ball{position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);font-size:min(3rem,5.5vw);line-height:1;z-index:6;transition:all .45s cubic-bezier(.25,.46,.45,.94);filter:drop-shadow(0 4px 8px rgba(0,0,0,.4));}
+.kicker-wrap{display:flex;flex-direction:column;align-items:center;margin-top:-8px;z-index:2;}
+.kicker-dino{font-size:min(6rem,11vw);line-height:1;filter:drop-shadow(0 6px 12px rgba(0,0,0,.4));transition:transform .3s;}
+.kicker-dino.kick{animation:kickAnim .5s ease-in-out;}
+@keyframes kickAnim{0%{transform:rotate(0);}30%{transform:rotate(25deg) translateY(-8px);}60%{transform:rotate(-10deg);}100%{transform:rotate(0);}}
+.shootout-msg{font-family:'Fredoka One',cursive;font-size:clamp(1.3rem,5vw,1.9rem);color:#fff;text-shadow:2px 2px 0 rgba(0,0,0,.4);text-align:center;min-height:46px;margin-top:7px;z-index:2;padding:0 14px;}
+.shootout-msg.goal{color:var(--yellow);font-size:clamp(1.8rem,6vw,2.8rem);animation:goalPop .5s cubic-bezier(.175,.885,.32,1.275);}
+.shootout-msg.saved{color:#ff6b6b;}
+@keyframes goalPop{from{transform:scale(.5);opacity:0;}to{transform:scale(1);opacity:1;}}
+.pick-instruction{font-family:'Fredoka One',cursive;font-size:1rem;color:rgba(255,255,255,.85);text-align:center;z-index:2;margin-top:2px;animation:blink 1s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.5;}}
+.shootout-btn-row{display:flex;gap:10px;margin-top:10px;z-index:2;flex-wrap:wrap;justify-content:center;}
+
+/* Trophy reveal */
+.trophy-reveal{display:flex;flex-direction:column;align-items:center;gap:6px;z-index:2;margin-top:4px;}
+.trophy-big{font-size:7rem;animation:trophySpin 1.2s cubic-bezier(.175,.885,.32,1.275);filter:drop-shadow(0 6px 16px rgba(0,0,0,.4));}
+@keyframes trophySpin{from{transform:scale(0) rotateY(0);}to{transform:scale(1) rotateY(720deg);}}
+.trophy-label{font-family:'Fredoka One',cursive;font-size:1.3rem;color:var(--yellow);text-shadow:2px 2px 0 rgba(0,0,0,.4);text-align:center;}
+
+/* ─── SESSION RESULTS ─── */
+#screen-results{gap:14px;text-align:center;background:linear-gradient(160deg,#0f7bc4 0%,#1a9fd4 50%,#2ecc71 100%);}
+#screen-results::before{content:'';position:fixed;bottom:-60px;left:-60px;right:-60px;height:200px;background:#1a7a42;border-radius:50% 50% 0 0/80px 80px 0 0;z-index:0;}
+.results-card{background:#fff;border-radius:22px;padding:20px 18px;max-width:460px;width:100%;box-shadow:var(--shadow);position:relative;z-index:1;}
+.res-trophy{font-size:4.5rem;animation:spin 1s ease-in-out;position:relative;z-index:1;}
+@keyframes spin{from{transform:rotateY(0) scale(0);}to{transform:rotateY(360deg) scale(1);}}
+.result-title{font-family:'Fredoka One',cursive;font-size:1.9rem;color:#fff;text-shadow:3px 3px 0 rgba(0,0,0,.3);margin:4px 0;position:relative;z-index:1;}
+.stars-row{display:flex;justify-content:center;gap:8px;font-size:2.3rem;margin:4px 0;position:relative;z-index:1;}
+.stat-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:2px dashed #eee;}
+.stat-row:last-child{border-bottom:none;}
+.stat-label{font-size:.88rem;font-weight:800;color:#666;}
+.stat-value{font-family:'Fredoka One',cursive;font-size:1.35rem;color:var(--dark);}
+.stat-value.green{color:#1a9e55;}
+.stat-value.red{color:var(--red);}
+.stat-value.gold{color:#c0840a;}
+.world-progress-section{margin-top:10px;border-top:2px dashed #eee;padding-top:10px;}
+.wps-title{font-family:'Fredoka One',cursive;font-size:1rem;color:var(--dark);margin-bottom:8px;}
+.wps-stars{display:flex;gap:5px;justify-content:center;font-size:1.5rem;}
+.wps-sub{font-size:.78rem;color:#888;font-weight:700;margin-top:3px;}
+
+/* ─── PARENT REPORT ─── */
+#screen-parent{gap:14px;background:linear-gradient(160deg,#2c3e50,#34495e);}
+.parent-card{background:#fff;border-radius:20px;padding:20px 18px;max-width:520px;width:100%;box-shadow:var(--shadow);max-height:70vh;overflow-y:auto;}
+.parent-title{font-family:'Fredoka One',cursive;font-size:1.8rem;color:var(--dark);margin-bottom:4px;}
+.parent-sub{font-size:.85rem;color:#888;font-weight:700;margin-bottom:14px;}
+.report-section{margin-bottom:16px;}
+.report-section-title{font-family:'Fredoka One',cursive;font-size:1.1rem;color:var(--sky);border-bottom:2px solid #eef;padding-bottom:4px;margin-bottom:8px;}
+.report-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px dashed #f0f0f0;font-size:.88rem;}
+.report-label{color:#666;font-weight:700;}
+.report-value{font-weight:800;color:var(--dark);}
+.trend-bar-wrap{height:60px;display:flex;gap:5px;align-items:flex-end;margin-top:6px;}
+.trend-bar-col{display:flex;flex-direction:column;align-items:center;gap:2px;flex:1;}
+.trend-bar{width:100%;border-radius:4px 4px 0 0;min-height:3px;background:linear-gradient(180deg,#2ecc71,#1a7a42);}
+.trend-bar.below{background:linear-gradient(180deg,#e74c3c,#922b21);}
+.trend-num{font-size:.6rem;font-weight:700;color:#aaa;}
+.watchout-item{background:#fff8f0;border-left:3px solid #f39c12;border-radius:4px;padding:7px 10px;margin-bottom:6px;font-size:.82rem;color:#555;font-weight:700;}
+.watchout-item strong{color:var(--dark);}
+.world-progress-row{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px dashed #f0f0f0;}
+.wpr-icon{font-size:1.4rem;}
+.wpr-name{font-size:.85rem;font-weight:800;color:var(--dark);flex:1;}
+.wpr-stars{font-size:.95rem;}
+.wpr-sessions{font-size:.75rem;color:#888;font-weight:700;}
+
+/* ─── LEADERBOARD ─── */
+.lb-section{margin-top:10px;border-top:2px dashed #eee;padding-top:10px;}
+.lb-title{font-family:'Fredoka One',cursive;font-size:1rem;color:var(--dark);margin-bottom:7px;}
+.lb-row{display:flex;justify-content:space-between;align-items:center;padding:6px 7px;border-radius:9px;margin-bottom:3px;}
+.lb-row.gold-row{background:#fffbe6;}
+.lb-row.silver-row{background:#f8f8f8;}
+.lb-row.bronze-row{background:#fff5f0;}
+.lb-medal{font-size:1.3rem;width:26px;text-align:center;flex-shrink:0;}
+.lb-score{font-family:'Fredoka One',cursive;font-size:1.2rem;color:var(--dark);}
+.lb-date{font-size:.7rem;font-weight:700;color:#aaa;}
+.lb-world{font-size:.7rem;font-weight:700;color:#888;}
+.lb-empty{font-family:'Fredoka One',cursive;font-size:.95rem;color:#ccc;text-align:center;padding:10px;}
+
+/* confetti */
+.confetti-piece{position:fixed;width:11px;height:11px;border-radius:2px;animation:confettiFall linear forwards;z-index:200;pointer-events:none;}
+@keyframes confettiFall{0%{transform:translateY(-20px) rotate(0);opacity:1;}100%{transform:translateY(110vh) rotate(720deg);opacity:.3;}}
+
+@media(max-height:700px){
+  .title-dino{font-size:4rem;}
+  .eq-num{font-size:2.2rem;}
+  .numpad-btn{padding:10px;font-size:1.4rem;}
+  .coach-dino{font-size:2.5rem;}
+  #screen-game{padding-top:8px;gap:7px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     TITLE SCREEN
+══════════════════════════════════════ -->
+<div id="screen-title" class="screen active">
+  <button id="mute-btn" onclick="toggleMute()" style="position:absolute;top:18px;right:18px;font-size:1.6rem;background:rgba(255,255,255,0.2);border:2px solid rgba(255,255,255,0.4);border-radius:50%;width:52px;height:52px;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center;">🔊</button>
+  <div class="title-dino">🦕</div>
+  <h1 class="title-main"><span>Orion's</span><br>Dino Math Adventure!</h1>
+  <p class="title-sub">Six worlds to conquer — can you reach Space Stadium?</p>
+  <div class="title-btn-row">
+    <button class="btn btn-green" onclick="snd('tap');showScreen('screen-map')" style="font-size:1.6rem;padding:18px 50px;">Adventure! 🗺️</button>
+  </div>
+  <div class="title-btn-row">
+    <button class="btn btn-ghost btn-sm" onclick="snd('tap');showScreen('screen-scores')">🏆 Scores</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     WORLD MAP SCREEN
+══════════════════════════════════════ -->
+<div id="screen-map" class="screen" style="padding:0;justify-content:flex-start;background:none;">
+  <div style="position:fixed;inset:0;z-index:0;" id="map-bg"></div>
+  <div class="map-header" style="position:relative;z-index:10;">
+    <div class="map-header-title">🗺️ Orion's World Map</div>
+    <div class="map-header-right">
+      <button class="btn btn-ghost" style="font-size:.85rem;padding:7px 14px;" onclick="showScreen('screen-title')">🏠 Home</button>
+      <button class="btn btn-ghost" style="font-size:.85rem;padding:7px 14px;" onclick="promptParentPIN()" title="Parent Report">👨‍👩‍👧</button>
+    </div>
+  </div>
+  <div class="map-scroll" id="map-scroll" style="position:relative;z-index:1;">
+    <div class="map-canvas" id="map-canvas">
+      <svg class="map-svg" id="map-svg" xmlns="http://www.w3.org/2000/svg"></svg>
+      <!-- World nodes injected by JS -->
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     PLAY SCREEN (pre-game setup)
+══════════════════════════════════════ -->
+<div id="screen-play" class="screen" style="gap:12px;">
+  <div class="play-world-badge" id="play-world-badge">🏝️ Dino Island</div>
+  <p class="play-info" id="play-world-info">Numbers up to 20 · Beat 80% to earn a ⭐</p>
+
+  <div class="session-goal-bar">
+    <div class="sgb-label" id="sgb-label">Stars earned here: 0 of 3</div>
+    <div class="sgb-stars" id="sgb-stars">
+      <span class="sgb-star" id="sgb-0">⭐</span>
+      <span class="sgb-star" id="sgb-1">⭐</span>
+      <span class="sgb-star" id="sgb-2">⭐</span>
+    </div>
+  </div>
+
+  <div class="section-title">How many questions?</div>
+  <div class="slider-wrap">
+    <div class="slider-label">DRAG TO PICK</div>
+    <div class="slider-display" id="slider-display">10</div>
+    <input type="range" id="q-slider" min="10" max="100" step="5" value="10" oninput="updateSlider(this.value)">
+    <div class="slider-ticks">
+      <span class="slider-tick">10</span><span class="slider-tick">30</span>
+      <span class="slider-tick">55</span><span class="slider-tick">80</span>
+      <span class="slider-tick">100</span>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+    <button class="btn" onclick="startGame()">Let's Play! 🚀</button>
+    <button class="btn btn-ghost" onclick="showScreen('screen-map')">Back to Map</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     GAME SCREEN
+══════════════════════════════════════ -->
+<div id="screen-game" class="screen">
+  <div class="game-world-bar">
+    <span class="gwb-icon" id="gwb-icon">🏝️</span>
+    <span class="gwb-label" id="gwb-label">Dino Island</span>
+    <span class="gwb-accuracy" id="gwb-accuracy">Accuracy: —</span>
+  </div>
+  <div class="hud">
+    <div class="hud-box"><div class="hud-label">⭐ Score</div><div class="hud-value" id="hud-score">0</div></div>
+    <div class="hud-box"><div class="hud-label">🔥 Streak</div><div class="hud-value streak" id="hud-streak">0</div></div>
+    <div class="hud-box"><div class="hud-label">📋 Q</div><div class="hud-value" id="hud-q">1</div></div>
+    <div class="hud-box"><div class="hud-label">✅ Right</div><div class="hud-value" id="hud-right" style="color:#1a9e55">0</div></div>
+  </div>
+  <div class="timer-bar-wrap">
+    <div class="timer-bar" id="timer-bar" style="width:100%"></div>
+  </div>
+  <div class="coach-wrap">
+    <div class="coach-dino" id="coach-dino">🦕</div>
+    <div class="speech-bubble" id="coach-msg">Ready? Let's go! 💪</div>
+  </div>
+  <div class="question-card">
+    <div class="op-badge op-add" id="op-badge">➕ ADDITION</div>
+    <div class="eq-num" id="num1">12</div>
+    <div class="eq-row-op">
+      <span class="eq-operator add" id="op-sym">+</span>
+      <div class="eq-num" id="num2">34</div>
+    </div>
+    <div class="eq-line"></div>
+    <div class="eq-answer-row">
+      <input type="number" class="answer-input" id="answer-input" placeholder="?" autocomplete="off" inputmode="numeric" readonly>
+    </div>
+  </div>
+  <div class="numpad">
+    <button class="numpad-btn" onclick="numPress('7')">7</button>
+    <button class="numpad-btn" onclick="numPress('8')">8</button>
+    <button class="numpad-btn" onclick="numPress('9')">9</button>
+    <button class="numpad-btn" onclick="numPress('4')">4</button>
+    <button class="numpad-btn" onclick="numPress('5')">5</button>
+    <button class="numpad-btn" onclick="numPress('6')">6</button>
+    <button class="numpad-btn" onclick="numPress('1')">1</button>
+    <button class="numpad-btn" onclick="numPress('2')">2</button>
+    <button class="numpad-btn" onclick="numPress('3')">3</button>
+    <button class="numpad-btn del" onclick="numPress('del')">⌫</button>
+    <button class="numpad-btn" onclick="numPress('0')">0</button>
+    <button class="numpad-btn go" onclick="submitAnswer()">GO! ✅</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     PENALTY SHOOTOUT (world unlock)
+══════════════════════════════════════ -->
+<div id="screen-shootout" class="screen">
+  <div class="shootout-bg" id="shootout-bg">
+    <div class="crowd" id="crowd"></div>
+    <div class="shootout-title" id="shootout-title">🔓 WORLD UNLOCKED! 🔓</div>
+    <div class="shootout-subtitle" id="shootout-subtitle">You earned 3 stars!</div>
+    <div class="unlock-badge" id="unlock-badge">🚀 NEW WORLD UNLOCKED!</div>
+    <div class="goal-arena">
+      <div class="goal-net">
+        <div class="goal-zones picking" id="goal-zones">
+          <div class="goal-zone" onclick="pickZone(0)">↖️</div>
+          <div class="goal-zone" onclick="pickZone(1)">⬆️</div>
+          <div class="goal-zone" onclick="pickZone(2)">↗️</div>
+          <div class="goal-zone" onclick="pickZone(3)">↙️</div>
+          <div class="goal-zone" onclick="pickZone(4)">⬇️</div>
+          <div class="goal-zone" onclick="pickZone(5)">↘️</div>
+        </div>
+        <div class="goalie" id="goalie">🧤</div>
+        <div class="ball" id="ball">⚽</div>
+      </div>
+      <div class="kicker-wrap">
+        <div class="kicker-dino" id="kicker-dino">🦕</div>
+      </div>
+    </div>
+    <div class="pick-instruction" id="pick-instruction">👆 Pick a corner to celebrate!</div>
+    <div class="shootout-msg" id="shootout-msg"></div>
+    <div class="trophy-reveal" id="trophy-reveal" style="display:none;">
+      <div class="trophy-big" id="trophy-big">🥚</div>
+      <div class="trophy-label" id="trophy-label">Dino Egg Trophy!</div>
+    </div>
+    <div class="shootout-btn-row" id="shootout-btns" style="display:none;">
+      <button class="btn btn-green" id="shootout-continue-btn" onclick="afterShootout()">🚀 Play Next World!</button>
+      <button class="btn btn-ghost" onclick="showScreen('screen-map')">🗺️ World Map</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SESSION RESULTS
+══════════════════════════════════════ -->
+<div id="screen-results" class="screen">
+  <div class="res-trophy" id="res-trophy">🏆</div>
+  <h1 class="result-title" id="result-title">Great Game!</h1>
+  <div class="stars-row" id="stars-row">⭐⭐⭐</div>
+  <div class="results-card">
+    <div class="stat-row"><span class="stat-label">⭐ Score</span><span class="stat-value green" id="res-score">0</span></div>
+    <div class="stat-row"><span class="stat-label">✅ Correct</span><span class="stat-value green" id="res-correct">0</span></div>
+    <div class="stat-row"><span class="stat-label">❌ Missed</span><span class="stat-value red" id="res-wrong">0</span></div>
+    <div class="stat-row"><span class="stat-label">🎯 Accuracy</span><span class="stat-value" id="res-pct">0%</span></div>
+    <div class="stat-row"><span class="stat-label">⏱ Avg Speed</span><span class="stat-value" id="res-speed">0s</span></div>
+    <div class="stat-row"><span class="stat-label">🔥 Best Streak</span><span class="stat-value" id="res-streak">0</span></div>
+    <div class="stat-row"><span class="stat-label">➕ Addition</span><span class="stat-value green" id="res-add">-</span></div>
+    <div class="stat-row"><span class="stat-label">➖ Subtraction</span><span class="stat-value green" id="res-sub">-</span></div>
+    <div class="world-progress-section">
+      <div class="wps-title" id="wps-title">⭐ Progress at Dino Island</div>
+      <div class="wps-stars" id="wps-stars"></div>
+      <div class="wps-sub" id="wps-sub">Keep going to unlock next world!</div>
+    </div>
+    <div class="lb-section">
+      <div class="lb-title">🏆 Top Scores</div>
+      <div id="mini-leaderboard"></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;position:relative;z-index:1;" id="results-btn-row">
+    <button class="btn" onclick="replayWorld()">Play Again! 🦕</button>
+    <button class="btn btn-ghost" onclick="showScreen('screen-map')">World Map 🗺️</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     TOP SCORES
+══════════════════════════════════════ -->
+<div id="screen-scores" class="screen" style="gap:14px;background:linear-gradient(160deg,#0f7bc4,#1a9fd4 50%,#2ecc71);">
+  <div style="font-size:4rem;animation:bounce 1.2s ease-in-out infinite;">🏆</div>
+  <h1 class="title-main" style="color:#fff;">Hall of Champions</h1>
+  <div class="results-card" style="max-width:420px;position:relative;z-index:1;">
+    <div class="lb-title" style="font-size:1.2rem;">🦕 Orion's Best Games</div>
+    <div id="full-leaderboard"></div>
+  </div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;position:relative;z-index:1;">
+    <button class="btn" onclick="showScreen('screen-map')">Map 🗺️</button>
+    <button class="btn btn-ghost" onclick="showScreen('screen-title')">Home</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     PARENT REPORT
+══════════════════════════════════════ -->
+<div id="screen-parent" class="screen">
+  <div style="font-size:1.6rem;color:var(--yellow);font-family:'Fredoka One',cursive;text-shadow:2px 2px 0 rgba(0,0,0,.3);">👨‍👩‍👧 Parent Report</div>
+  <div class="parent-card">
+    <div class="parent-title">Orion's Progress</div>
+    <div class="parent-sub" id="parent-date">Report generated today</div>
+    <div id="parent-content"></div>
+  </div>
+  <button class="btn btn-ghost" onclick="showScreen('screen-title')">← Back</button>
+</div>
+
+<!-- CONFIRM RESET MODAL -->
+<div id="confirm-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:400;align-items:center;justify-content:center;">
+  <div style="background:#fff;border-radius:24px;padding:28px 24px;max-width:300px;width:88%;text-align:center;box-shadow:0 16px 48px rgba(0,0,0,.4);">
+    <div style="font-size:3rem;margin-bottom:8px;">🗑️</div>
+    <div style="font-family:'Fredoka One',cursive;font-size:1.3rem;color:#1a2533;margin-bottom:8px;">Reset All Data?</div>
+    <div style="font-size:.85rem;color:#888;font-weight:700;margin-bottom:20px;">This will erase ALL of Orion's progress, stars, and scores. This cannot be undone.</div>
+    <div style="display:flex;gap:10px;justify-content:center;">
+      <button onclick="cancelReset()" style="font-family:'Fredoka One',cursive;font-size:1rem;padding:12px 22px;background:#f0f0f0;border:2px solid #ddd;border-radius:12px;cursor:pointer;color:#666;">Cancel</button>
+      <button onclick="confirmReset()" style="font-family:'Fredoka One',cursive;font-size:1rem;padding:12px 22px;background:#e74c3c;border:2px solid #c0392b;border-radius:12px;cursor:pointer;color:#fff;">Yes, Reset!</button>
+    </div>
+  </div>
+</div>
+
+<!-- CHANGE PIN MODAL -->
+<div id="change-pin-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:400;align-items:center;justify-content:center;">
+  <div style="background:#fff;border-radius:24px;padding:28px 24px;max-width:300px;width:88%;text-align:center;box-shadow:0 16px 48px rgba(0,0,0,.4);">
+    <div style="font-size:3rem;margin-bottom:8px;">🔑</div>
+    <div style="font-family:'Fredoka One',cursive;font-size:1.3rem;color:#1a2533;margin-bottom:8px;">New PIN</div>
+    <div style="font-size:.85rem;color:#888;font-weight:700;margin-bottom:12px;">Enter a new 4-digit number</div>
+    <input id="new-pin-entry" type="number" inputmode="numeric" maxlength="4"
+      style="font-family:'Fredoka One',cursive;font-size:2rem;width:120px;text-align:center;border:3px solid #ddd;border-radius:12px;padding:8px;outline:none;-moz-appearance:textfield;"
+      placeholder="0000">
+    <div id="new-pin-error" style="color:#e74c3c;font-size:.82rem;font-weight:800;min-height:20px;margin-top:6px;"></div>
+    <div style="display:flex;gap:10px;justify-content:center;margin-top:14px;">
+      <button onclick="cancelChangePIN()" style="font-family:'Fredoka One',cursive;font-size:1rem;padding:12px 22px;background:#f0f0f0;border:2px solid #ddd;border-radius:12px;cursor:pointer;color:#666;">Cancel</button>
+      <button onclick="confirmChangePIN()" style="font-family:'Fredoka One',cursive;font-size:1rem;padding:12px 22px;background:#1a9fd4;border:2px solid #0f7bc4;border-radius:12px;cursor:pointer;color:#fff;">Save PIN</button>
+    </div>
+  </div>
+</div>
+
+<!-- PIN MODAL -->
+<div id="pin-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:300;align-items:center;justify-content:center;">
+  <div style="background:#fff;border-radius:24px;padding:28px 24px;max-width:320px;width:90%;text-align:center;box-shadow:0 16px 48px rgba(0,0,0,.4);">
+    <div style="font-size:2.5rem;margin-bottom:8px;">👨‍👩‍👧</div>
+    <div style="font-family:'Fredoka One',cursive;font-size:1.4rem;color:#1a2533;margin-bottom:4px;">Parent Area</div>
+    <div style="font-size:.85rem;color:#888;font-weight:700;margin-bottom:16px;">Enter the 4-digit PIN to continue</div>
+    <div style="display:flex;gap:10px;justify-content:center;margin-bottom:14px;" id="pin-dots">
+      <div style="width:18px;height:18px;border-radius:50%;border:3px solid #ddd;" id="pd-0"></div>
+      <div style="width:18px;height:18px;border-radius:50%;border:3px solid #ddd;" id="pd-1"></div>
+      <div style="width:18px;height:18px;border-radius:50%;border:3px solid #ddd;" id="pd-2"></div>
+      <div style="width:18px;height:18px;border-radius:50%;border:3px solid #ddd;" id="pd-3"></div>
+    </div>
+    <div id="pin-error" style="color:#e74c3c;font-size:.82rem;font-weight:800;min-height:18px;margin-bottom:8px;"></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:220px;margin:0 auto;">
+      <button onclick="pinPress('1')" style="font-family:'Fredoka One',cursive;font-size:1.5rem;padding:12px;background:#f8f8f8;border:2px solid #eee;border-radius:12px;cursor:pointer;">1</button>
+      <button onclick="pinPress('2')" style="font-family:'Fredoka One',cursive;font-size:1.5rem;padding:12px;background:#f8f8f8;border:2px solid #eee;border-radius:12px;cursor:pointer;">2</button>
+      <button onclick="pinPress('3')" style="font-family:'Fredoka One',cursive;font-size:1.5rem;padding:12px;background:#f8f8f8;border:2px solid #eee;border-radius:12px;cursor:pointer;">3</button>
+      <button onclick="pinPress('4')" style="font-family:'Fredoka One',cursive;font-size:1.5rem;padding:12px;background:#f8f8f8;border:2px solid #eee;border-radius:12px;cursor:pointer;">4</button>
+      <button onclick="pinPress('5')" style="font-family:'Fredoka One',cursive;font-size:1.5rem;padding:12px;background:#f8f8f8;border:2px solid #eee;border-radius:12px;cursor:pointer;">5</button>
+      <button onclick="pinPress('6')" style="font-family:'Fredoka One',cursive;font-size:1.5rem;padding:12px;background:#f8f8f8;border:2px solid #eee;border-radius:12px;cursor:pointer;">6</button>
+      <button onclick="pinPress('7')" style="font-family:'Fredoka One',cursive;font-size:1.5rem;padding:12px;background:#f8f8f8;border:2px solid #eee;border-radius:12px;cursor:pointer;">7</button>
+      <button onclick="pinPress('8')" style="font-family:'Fredoka One',cursive;font-size:1.5rem;padding:12px;background:#f8f8f8;border:2px solid #eee;border-radius:12px;cursor:pointer;">8</button>
+      <button onclick="pinPress('9')" style="font-family:'Fredoka One',cursive;font-size:1.5rem;padding:12px;background:#f8f8f8;border:2px solid #eee;border-radius:12px;cursor:pointer;">9</button>
+      <button onclick="pinPress('del')" style="font-family:'Fredoka One',cursive;font-size:1.1rem;padding:12px;background:#fff0f0;border:2px solid #ffcccc;color:#e74c3c;border-radius:12px;cursor:pointer;">⌫</button>
+      <button onclick="pinPress('0')" style="font-family:'Fredoka One',cursive;font-size:1.5rem;padding:12px;background:#f8f8f8;border:2px solid #eee;border-radius:12px;cursor:pointer;">0</button>
+      <button onclick="closePinModal()" style="font-family:'Fredoka One',cursive;font-size:.9rem;padding:12px;background:#eee;border:2px solid #ddd;color:#888;border-radius:12px;cursor:pointer;">✕</button>
+    </div>
+    <div style="margin-top:14px;font-size:.72rem;color:#ccc;font-weight:700;">Default PIN: 1234 · Change it in the report</div>
+  </div>
+</div>
+
+<!-- FEEDBACK OVERLAY -->
+<div class="feedback-overlay" id="feedback-overlay">
+  <div class="feedback-emoji" id="feedback-emoji">🎉</div>
+  <div class="feedback-text" id="feedback-text">Awesome!</div>
+</div>
+<div class="level-toast" id="level-toast">🚀 Level Up!</div>
+
+<!-- ══════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════ -->
+<script>
+// ══════════════════════════════════════
+// SOUND ENGINE (Web Audio API)
+// ══════════════════════════════════════
+let audioCtx = null;
+let soundEnabled = true;
+
+function getAudioCtx() {
+  if (!audioCtx) {
+    try { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); } catch(e) {}
+  }
+  return audioCtx;
+}
+
+function resumeAudio() {
+  const ctx = getAudioCtx();
+  if (ctx && ctx.state === 'suspended') ctx.resume();
+}
+
+function playTone(freq, type, startTime, duration, gainVal, ctx, dest) {
+  const osc = ctx.createOscillator();
+  const g   = ctx.createGain();
+  osc.type = type;
+  osc.frequency.setValueAtTime(freq, startTime);
+  g.gain.setValueAtTime(gainVal, startTime);
+  g.gain.exponentialRampToValueAtTime(0.001, startTime + duration);
+  osc.connect(g); g.connect(dest);
+  osc.start(startTime);
+  osc.stop(startTime + duration + 0.05);
+}
+
+function snd(name) {
+  if (!soundEnabled) return;
+  const ctx = getAudioCtx();
+  if (!ctx) return;
+  resumeAudio();
+  const dest = ctx.destination;
+  const now  = ctx.currentTime;
+
+  switch(name) {
+    case 'tap':
+      playTone(600, 'sine', now, 0.08, 0.18, ctx, dest);
+      break;
+    case 'correct':
+      playTone(440, 'square', now,        0.10, 0.15, ctx, dest);
+      playTone(660, 'square', now + 0.10, 0.10, 0.15, ctx, dest);
+      playTone(880, 'square', now + 0.20, 0.14, 0.18, ctx, dest);
+      break;
+    case 'wrong':
+      playTone(220, 'sawtooth', now,        0.10, 0.20, ctx, dest);
+      playTone(160, 'sawtooth', now + 0.10, 0.14, 0.20, ctx, dest);
+      break;
+    case 'streak3':
+      [523, 659, 784].forEach((f, i) =>
+        playTone(f, 'square', now + i * 0.10, 0.09, 0.18, ctx, dest));
+      break;
+    case 'streak5':
+      [523, 659, 784, 1047].forEach((f, i) =>
+        playTone(f, 'square', now + i * 0.08, 0.08, 0.20, ctx, dest));
+      break;
+    case 'streak10':
+      [523, 659, 784, 1047, 1319].forEach((f, i) =>
+        playTone(f, 'square', now + i * 0.07, 0.09, 0.22, ctx, dest));
+      break;
+    case 'timer_warning':
+      for (let i = 0; i < 3; i++)
+        playTone(880, 'square', now + i * 0.25, 0.06, 0.12, ctx, dest);
+      break;
+    case 'timeout':
+      playTone(330, 'sawtooth', now,        0.15, 0.22, ctx, dest);
+      playTone(247, 'sawtooth', now + 0.18, 0.20, 0.25, ctx, dest);
+      break;
+    case 'numpad':
+      playTone(800, 'sine', now, 0.05, 0.10, ctx, dest);
+      break;
+    case 'kick_whoosh':
+      { const osc = ctx.createOscillator();
+        const g   = ctx.createGain();
+        osc.type  = 'sawtooth';
+        osc.frequency.setValueAtTime(300, now);
+        osc.frequency.exponentialRampToValueAtTime(80, now + 0.35);
+        g.gain.setValueAtTime(0.25, now);
+        g.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+        osc.connect(g); g.connect(dest);
+        osc.start(now); osc.stop(now + 0.4); }
+      break;
+    case 'goal':
+      [ [523,0],[659,0.12],[784,0.24],[1047,0.38],[784,0.55],[1047,0.68],[1319,0.82] ]
+        .forEach(([f,t]) => playTone(f, 'square', now+t, 0.18, 0.25, ctx, dest));
+      break;
+    case 'saved':
+      playTone(440, 'sawtooth', now,        0.18, 0.22, ctx, dest);
+      playTone(350, 'sawtooth', now + 0.20, 0.22, 0.22, ctx, dest);
+      playTone(280, 'sawtooth', now + 0.44, 0.28, 0.20, ctx, dest);
+      break;
+    case 'trophy':
+      [523,659,784,1047,1319,1568].forEach((f,i) =>
+        playTone(f, 'sine', now + i*0.09, 0.15, 0.20, ctx, dest));
+      break;
+    case 'world_unlock':
+      [ [523,0],[659,0.12],[784,0.24],[523,0.36],[659,0.48],
+        [784,0.62],[1047,0.76],[784,0.90],[1047,1.05],[1319,1.20] ]
+        .forEach(([f,t]) => playTone(f, 'square', now+t, 0.20, 0.28, ctx, dest));
+      break;
+    case 'star_earned':
+      [523, 784, 1047, 1319].forEach((f,i) =>
+        playTone(f, 'sine', now + i*0.10, 0.14, 0.22, ctx, dest));
+      break;
+    case 'session_end_good':
+      [523,659,784,659,784,1047].forEach((f,i) =>
+        playTone(f, 'square', now + i*0.11, 0.13, 0.22, ctx, dest));
+      break;
+    case 'session_end_bad':
+      [392, 349, 330].forEach((f,i) =>
+        playTone(f, 'sine', now + i*0.18, 0.20, 0.18, ctx, dest));
+      break;
+  }
+}
+
+function toggleMute() {
+  soundEnabled = !soundEnabled;
+  localStorage.setItem('dinoMathSound', soundEnabled ? '1' : '0');
+  document.getElementById('mute-btn').textContent = soundEnabled ? '🔊' : '🔇';
+  if (soundEnabled) snd('tap');
+}
+
+function initSound() {
+  const saved = localStorage.getItem('dinoMathSound');
+  soundEnabled = saved !== '0';
+  const btn = document.getElementById('mute-btn');
+  if (btn) btn.textContent = soundEnabled ? '🔊' : '🔇';
+}
+
+// ══════════════════════════════════════
+// WORLD DEFINITIONS
+// ══════════════════════════════════════
+const WORLDS = [
+  { id:0, name:'Dino Island',    emoji:'🏝️', max:20,  bg:['#1a9fd4','#0f7bc4','#2ecc71'], goalie:'🐊', trophy:'🥚', trophyName:'Dino Egg Trophy',   color:'#27ae60' },
+  { id:1, name:'Volcano Valley', emoji:'🌋', max:50,  bg:['#e74c3c','#c0392b','#f39c12'], goalie:'🦖', trophy:'🦴', trophyName:'Golden Bone',         color:'#e74c3c' },
+  { id:2, name:'Ice Mountain',   emoji:'🏔️', max:99,  bg:['#74b9ff','#0984e3','#dfe6e9'], goalie:'🐧', trophy:'❄️', trophyName:'Ice Crystal Cup',     color:'#0984e3' },
+  { id:3, name:'Storm Castle',   emoji:'🌩️', max:200, bg:['#6c5ce7','#a29bfe','#fdcb6e'], goalie:'🐉', trophy:'⚡', trophyName:'Thunder Cup',          color:'#6c5ce7' },
+  { id:4, name:'Ocean Arena',    emoji:'🌊', max:500, bg:['#00b894','#00cec9','#55efc4'], goalie:'🦈', trophy:'🐚', trophyName:'Pearl Trophy',         color:'#00b894' },
+  { id:5, name:'Space Stadium',  emoji:'🚀', max:999, bg:['#2d3436','#636e72','#fdcb6e'], goalie:'👾', trophy:'🏆', trophyName:'Galaxy Trophy',        color:'#fdcb6e' },
+];
+
+// Meandering path positions: [leftPercent, topPx]
+// Map canvas height will be set to fit all nodes
+const NODE_POSITIONS = [
+  { left:60, top:820 }, // World 0 — bottom right
+  { left:20, top:660 }, // World 1 — middle left
+  { left:65, top:500 }, // World 2 — middle right
+  { left:18, top:340 }, // World 3 — upper left
+  { left:62, top:180 }, // World 4 — upper right
+  { left:30, top: 40 }, // World 5 — top center
+];
+const MAP_CANVAS_HEIGHT = 940;
+
+// ══════════════════════════════════════
+// PERSISTENT STATE
+// ══════════════════════════════════════
+function getProfile() {
+  const def = {
+    currentWorld: 0,
+    worlds: WORLDS.map(()=>({ unlocked:false, stars:0, sessions:[] })),
+    allScores: [],
+    totalSessions: 0,
+  };
+  def.worlds[0].unlocked = true;
+  try {
+    const saved = JSON.parse(localStorage.getItem('dinoMathV4'));
+    if (saved) return saved;
+  } catch(e) {}
+  return def;
+}
+function saveProfile(p) {
+  localStorage.setItem('dinoMathV4', JSON.stringify(p));
+}
+
+// ══════════════════════════════════════
+// GAME STATE
+// ══════════════════════════════════════
+let profile = getProfile();
+let activeWorldId = 0;
+let totalQuestions = 10;
+let currentQ=0, score=0, streak=0, bestStreak=0;
+let correctCount=0, wrongCount=0;
+let addCorrect=0, addTotal=0, subCorrect=0, subTotal=0;
+let currentAnswer=0, currentOp='+';
+let timerInterval=null, timeLeft=0, maxTime=20;
+let questionStartTime=0, totalTime=0;
+let questionOps=[], recentWrong=[];
+let sessionUnlockedWorld = null; // set if this session unlocks a new world
+const coachDinos=['🦕','🦖','🐉'];
+
+const coachMessages = {
+  correct:['GOAAAAL! 🎉','SLAM DUNK! 🏀','On fire! 🔥','Coach Rex is proud! 🦖','Hat trick! ⚽⚽⚽','PERFECT! 🏆','Lightning fast! ⚡','Math champion! ⭐'],
+  wrong:['Oops! Answer: ','So close! It was ','Keep going! Answer: ','Almost! It was '],
+  streak3:'Hat-trick! 3 in a row! 🎩⚽',
+  streak5:'5 STREAK! UNSTOPPABLE! 🔥',
+  streak10:'10 IN A ROW!! LEGENDARY!! 🦖🏆',
+  start:["Let's go, champion! 💪","Coach Rex believes in you! 🦖","Show me what you've got! ⚽","Ready? Score some goals! 🏀"],
+};
+
+// ══════════════════════════════════════
+// NAVIGATION
+// ══════════════════════════════════════
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function replayWorld() {
+  showWorldPlay(activeWorldId);
+}
+
+// ══════════════════════════════════════
+// WORLD MAP
+// ══════════════════════════════════════
+function buildMap() {
+  const canvas = document.getElementById('map-canvas');
+  const svg = document.getElementById('map-svg');
+  canvas.style.height = MAP_CANVAS_HEIGHT + 'px';
+
+  // Background gradient per map
+  const mapBg = document.getElementById('map-bg');
+  mapBg.style.background = 'linear-gradient(180deg,#0a3d62 0%,#1a6b3c 40%,#0a3d62 100%)';
+  // Decorative clouds/stars in bg via CSS box-shadow trick — skip for cleanliness
+
+  // Clear existing nodes
+  canvas.querySelectorAll('.world-node').forEach(n=>n.remove());
+  svg.innerHTML = '';
+
+  // Draw SVG snake path
+  const pts = NODE_POSITIONS.map(p=>({
+    x: (p.left/100)*canvas.offsetWidth || (p.left/100)*360,
+    y: p.top + 50
+  }));
+
+  // Build smooth catmull-rom style path
+  let d = `M ${pts[0].x} ${pts[0].y}`;
+  for(let i=1;i<pts.length;i++){
+    const p0=pts[i-1], p1=pts[i];
+    const cx1=p0.x + (p1.x-p0.x)*0.5;
+    const cy1=p0.y;
+    const cx2=p1.x - (p1.x-p0.x)*0.5;
+    const cy2=p1.y;
+    d += ` C ${cx1} ${cy1}, ${cx2} ${cy2}, ${p1.x} ${p1.y}`;
+  }
+
+  // Shadow path
+  const shadow = document.createElementNS('http://www.w3.org/2000/svg','path');
+  shadow.setAttribute('d',d);
+  shadow.setAttribute('fill','none');
+  shadow.setAttribute('stroke','rgba(0,0,0,0.3)');
+  shadow.setAttribute('stroke-width','16');
+  shadow.setAttribute('stroke-linecap','round');
+  svg.appendChild(shadow);
+
+  // Dashed locked path
+  const lockedPath = document.createElementNS('http://www.w3.org/2000/svg','path');
+  lockedPath.setAttribute('d',d);
+  lockedPath.setAttribute('fill','none');
+  lockedPath.setAttribute('stroke','rgba(255,255,255,0.2)');
+  lockedPath.setAttribute('stroke-width','10');
+  lockedPath.setAttribute('stroke-linecap','round');
+  lockedPath.setAttribute('stroke-dasharray','20,14');
+  svg.appendChild(lockedPath);
+
+  // Unlocked colored path segments
+  for(let i=0;i<WORLDS.length-1;i++){
+    const w=profile.worlds[i];
+    if(!w.unlocked) break;
+    const segPts=[pts[i],pts[i+1]];
+    const p0=segPts[0],p1=segPts[1];
+    const cx1=p0.x+(p1.x-p0.x)*0.5, cy1=p0.y;
+    const cx2=p1.x-(p1.x-p0.x)*0.5, cy2=p1.y;
+    const seg=document.createElementNS('http://www.w3.org/2000/svg','path');
+    seg.setAttribute('d',`M ${p0.x} ${p0.y} C ${cx1} ${cy1}, ${cx2} ${cy2}, ${p1.x} ${p1.y}`);
+    seg.setAttribute('fill','none');
+    seg.setAttribute('stroke',WORLDS[i].color);
+    seg.setAttribute('stroke-width','10');
+    seg.setAttribute('stroke-linecap','round');
+    svg.appendChild(seg);
+    // Dots along path
+    for(let t=0;t<=1;t+=0.15){
+      const bx=bezierPoint(p0.x,cx1,cx2,p1.x,t);
+      const by=bezierPoint(p0.y,cy1,cy2,p1.y,t);
+      const dot=document.createElementNS('http://www.w3.org/2000/svg','circle');
+      dot.setAttribute('cx',bx); dot.setAttribute('cy',by);
+      dot.setAttribute('r','4'); dot.setAttribute('fill','rgba(255,255,255,0.5)');
+      svg.appendChild(dot);
+    }
+  }
+
+  // World nodes
+  WORLDS.forEach((world,i)=>{
+    const pos=NODE_POSITIONS[i];
+    const wData=profile.worlds[i];
+    const node=document.createElement('div');
+    node.className='world-node';
+    node.style.cssText=`left:${pos.left}%;top:${pos.top}px;transform:translateX(-50%);`;
+
+    const isUnlocked=wData.unlocked;
+    const isCurrent=profile.currentWorld===i;
+    const starsEarned=wData.stars;
+
+    node.innerHTML=`
+      <div class="world-island ${isUnlocked?'':'locked'} ${isCurrent?'current':''}"
+           style="background:radial-gradient(circle at 35% 35%,${world.color}ee,${world.color}88);"
+           ${isUnlocked?`onclick="showWorldPlay(${i})"`:''}>
+        ${isCurrent?`<div class="world-dino-marker">🦕</div>`:''}
+        <span style="font-size:2.8rem;position:relative;z-index:1;">${world.emoji}</span>
+      </div>
+      <div class="world-name">${world.name}</div>
+      <div class="world-stars">${starsDisplay(starsEarned)}</div>
+      ${isUnlocked && starsEarned<3 ? `<div class="world-progress">${progressDots(i)}</div>` : ''}
+    `;
+    canvas.appendChild(node);
+  });
+
+  // Scroll to current world
+  const curPos=NODE_POSITIONS[profile.currentWorld];
+  setTimeout(()=>{
+    const scroll=document.getElementById('map-scroll');
+    const scrollTarget=curPos.top - 200;
+    scroll.scrollTo({top:Math.max(0,scrollTarget),behavior:'smooth'});
+  }, 100);
+}
+
+function starsDisplay(n) {
+  return '⭐'.repeat(n)+'☆'.repeat(3-n);
+}
+
+function progressDots(worldId) {
+  const w=profile.worlds[worldId];
+  const sessionsThisRound=w.sessions.filter(s=>s.pct>=80).length % 3;
+  return [0,1,2].map(i=>`<div class="prog-dot ${i<sessionsThisRound?'filled':''}"></div>`).join('');
+}
+
+function bezierPoint(p0,p1,p2,p3,t) {
+  return Math.pow(1-t,3)*p0+3*Math.pow(1-t,2)*t*p1+3*(1-t)*t*t*p2+Math.pow(t,3)*p3;
+}
+
+// ══════════════════════════════════════
+// WORLD PLAY SETUP
+// ══════════════════════════════════════
+function showWorldPlay(worldId) {
+  if(!profile.worlds[worldId].unlocked) return;
+  activeWorldId=worldId;
+  const world=WORLDS[worldId];
+  const wData=profile.worlds[worldId];
+
+  // Set background color
+  document.getElementById('play-world-badge').textContent=world.emoji+' '+world.name;
+  document.getElementById('play-world-badge').style.background=world.color;
+  document.getElementById('play-world-info').textContent=`Numbers up to ${world.max} · Beat 80% to earn a ⭐`;
+
+  // Stars display
+  const stars=wData.stars;
+  document.getElementById('sgb-label').textContent=`Stars earned here: ${stars} of 3`;
+  for(let i=0;i<3;i++){
+    const el=document.getElementById('sgb-'+i);
+    el.className='sgb-star '+(i<stars?'earned':'');
+  }
+
+  // Reset slider
+  document.getElementById('q-slider').value=10;
+  document.getElementById('slider-display').textContent='10';
+  totalQuestions=10;
+
+  showScreen('screen-play');
+}
+
+function updateSlider(val){
+  document.getElementById('slider-display').textContent=val;
+  totalQuestions=parseInt(val);
+}
+
+// ══════════════════════════════════════
+// GAME LOGIC
+// ══════════════════════════════════════
+function startGame(){
+  currentQ=0; score=0; streak=0; bestStreak=0;
+  correctCount=0; wrongCount=0;
+  addCorrect=0; addTotal=0; subCorrect=0; subTotal=0;
+  totalTime=0; questionOps=[]; recentWrong=[];
+  sessionUnlockedWorld=null;
+
+  const world=WORLDS[activeWorldId];
+  document.getElementById('gwb-icon').textContent=world.emoji;
+  document.getElementById('gwb-label').textContent=world.name;
+  document.getElementById('gwb-accuracy').textContent='Accuracy: —';
+
+  showScreen('screen-game');
+  setCoach(pick(coachMessages.start));
+  nextQuestion();
+}
+
+function nextQuestion(){
+  if(currentQ>=totalQuestions){ endGame(); return; }
+  currentQ++;
+  document.getElementById('hud-q').textContent=currentQ+'/'+totalQuestions;
+  const inp=document.getElementById('answer-input');
+  inp.value=''; inp.classList.remove('correct','wrong');
+
+  // Op: 65% chance to switch each question
+  let op;
+  if(currentQ===1){ op=Math.random()<.5?'+':'-'; }
+  else { const last=questionOps[questionOps.length-1]; op=(Math.random()<.65)?(last==='+'?'-':'+'):last; }
+  currentOp=op; questionOps.push(op);
+
+  // Numbers flat within world range
+  const world=WORLDS[activeWorldId];
+  const max=world.max;
+  let n1,n2;
+  if(op==='+'){
+    n1=rand(1,Math.floor(max*.8)); n2=rand(1,max-n1); currentAnswer=n1+n2; addTotal++;
+  } else {
+    const minN=Math.max(5,Math.floor(max*.12));
+    n1=rand(minN,max); n2=rand(1,n1-1); currentAnswer=n1-n2; subTotal++;
+  }
+
+  document.getElementById('num1').textContent=n1;
+  document.getElementById('num2').textContent=n2;
+  const opSym=document.getElementById('op-sym');
+  opSym.textContent=op; opSym.className='eq-operator '+(op==='+'?'add':'sub');
+  const badge=document.getElementById('op-badge');
+  badge.className='op-badge '+(op==='+'?'op-add':'op-sub');
+  badge.textContent=op==='+'?'➕ ADDITION':'➖ SUBTRACTION';
+
+  if(timerInterval) clearInterval(timerInterval);
+  maxTime=max<=20?22:max<=50?25:max<=99?28:35;
+  timeLeft=maxTime; questionStartTime=Date.now();
+  const bar=document.getElementById('timer-bar');
+  bar.style.width='100%';
+  timerInterval=setInterval(()=>{
+    timeLeft-=.1;
+    const pct=Math.max(0,(timeLeft/maxTime)*100);
+    bar.style.width=pct+'%';
+    // Warning beep when hitting 25% time remaining
+    if(timeLeft>0 && Math.round(timeLeft*10)===Math.round(maxTime*0.25*10)) snd('timer_warning');
+    if(timeLeft<=0){ clearInterval(timerInterval); handleWrong(true); }
+  },100);
+}
+
+function submitAnswer(){
+  const inp=document.getElementById('answer-input');
+  const val=parseInt(inp.value);
+  if(inp.value===''||isNaN(val)) return;
+  clearInterval(timerInterval);
+  const elapsed=(Date.now()-questionStartTime)/1000;
+  totalTime+=elapsed;
+  val===currentAnswer?handleCorrect(elapsed):handleWrong();
+}
+
+function handleCorrect(elapsed){
+  const inp=document.getElementById('answer-input');
+  inp.classList.add('correct');
+  correctCount++; streak++;
+  if(streak>bestStreak) bestStreak=streak;
+  if(currentOp==='+') addCorrect++; else subCorrect++;
+  const speedBonus=Math.max(0,Math.floor((maxTime-elapsed)*2));
+  score+=10+speedBonus+Math.floor(streak*5);
+  updateHud();
+
+  let msg;
+  if(streak>=10){ msg=coachMessages.streak10; snd('streak10'); }
+  else if(streak>=5){ msg=coachMessages.streak5; snd('streak5'); }
+  else if(streak===3){ msg=coachMessages.streak3; snd('streak3'); }
+  else { msg=pick(coachMessages.correct); snd('correct'); }
+  setCoach(msg);
+  showFeedback(true,streak);
+  setTimeout(nextQuestion,900);
+}
+
+function handleWrong(timedOut=false){
+  const inp=document.getElementById('answer-input');
+  inp.classList.add('wrong');
+  wrongCount++; streak=0; updateHud();
+  recentWrong.push(1); if(recentWrong.length>5) recentWrong.shift();
+  snd(timedOut ? 'timeout' : 'wrong');
+  setCoach((timedOut?'⏰ Time! ':'')+pick(coachMessages.wrong)+currentAnswer+'!');
+  showFeedback(false);
+  setTimeout(()=>{ inp.value=''; inp.classList.remove('wrong'); nextQuestion(); },1300);
+}
+
+function updateHud(){
+  document.getElementById('hud-score').textContent=score;
+  document.getElementById('hud-streak').textContent=streak;
+  document.getElementById('hud-right').textContent=correctCount;
+  const pct=currentQ>0?Math.round(correctCount/currentQ*100):0;
+  document.getElementById('gwb-accuracy').textContent='Accuracy: '+pct+'%';
+}
+
+function setCoach(msg){
+  document.getElementById('coach-msg').textContent=msg;
+  document.getElementById('coach-dino').textContent=pick(coachDinos);
+}
+
+const correctEmojis=['🎉','⭐','🏆','⚽','🏀','🦖','🔥','💥'];
+const wrongEmojis=['😬','💪','🦕','🎯'];
+
+function showFeedback(correct,str){
+  const ov=document.getElementById('feedback-overlay');
+  ov.className='feedback-overlay show '+(correct?'correct-bg':'wrong-bg');
+  if(correct){
+    let texts=['Awesome!','Great job!','Nailed it!','GOAAAL!','Slam Dunk!','Perfect!'];
+    if(str>=5) texts=['UNSTOPPABLE!','LEGENDARY!','ON FIRE! 🔥'];
+    document.getElementById('feedback-emoji').textContent=pick(correctEmojis);
+    document.getElementById('feedback-text').textContent=pick(texts);
+  } else {
+    document.getElementById('feedback-emoji').textContent=pick(wrongEmojis);
+    document.getElementById('feedback-text').textContent=pick(['Keep going!','You got this!','Next one!','Try again!']);
+  }
+  setTimeout(()=>{ ov.className='feedback-overlay'; },800);
+}
+
+// ══════════════════════════════════════
+// END GAME + PROGRESSION
+// ══════════════════════════════════════
+function endGame(){
+  clearInterval(timerInterval);
+  const pct=totalQuestions>0?Math.round(correctCount/totalQuestions*100):0;
+  const passed=pct>=80 && correctCount>=3;
+
+  // Record session
+  const sessionEntry={
+    worldId:activeWorldId,
+    score, pct, correct:correctCount, total:totalQuestions,
+    addAcc: addTotal>0?Math.round(addCorrect/addTotal*100):null,
+    subAcc: subTotal>0?Math.round(subCorrect/subTotal*100):null,
+    avgSpeed: totalQuestions>0?(totalTime/totalQuestions).toFixed(1):null,
+    date: new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}),
+    ts: Date.now(),
+  };
+
+  const wData=profile.worlds[activeWorldId];
+  wData.sessions.push(sessionEntry);
+
+  // Count qualifying sessions (80%+ accuracy in most recent sessions at this world)
+  const qualSessions=wData.sessions.filter(s=>s.pct>=80).length;
+  const newStars=Math.min(3,Math.floor(qualSessions/1)); // 1 star per qualifying session, max 3
+  // Actually: each qualifying session gives 1 star tick; 3 ticks = 1 star; collect 3 stars = unlock
+  // Simpler: track "qualifying sessions" mod 3, full star every 3
+  const oldStars=wData.stars;
+  const newStarCount=Math.min(3,Math.floor(qualSessions/3)*1 + (qualSessions%3>=1?1:0));
+  // Let's do cleanest approach: 1 star per qualifying session, cap at 3. 3 stars = unlock next.
+  wData.stars=Math.min(3,qualSessions); // stars = # qualifying sessions, max 3
+  // Override: 3 qualifying sessions (not necessarily consecutive) = 3 stars = unlock
+  const justEarned3Stars=(oldStars<3&&wData.stars>=3&&passed);
+
+  // Check if next world should unlock
+  if(justEarned3Stars && activeWorldId<WORLDS.length-1 && !profile.worlds[activeWorldId+1].unlocked){
+    profile.worlds[activeWorldId+1].unlocked=true;
+    profile.currentWorld=activeWorldId+1;
+    sessionUnlockedWorld=activeWorldId+1;
+  } else if(passed && profile.currentWorld===activeWorldId) {
+    // Stay at current, no unlock yet
+  }
+
+  // Save global score
+  profile.allScores.push({score,pct,date:sessionEntry.date,world:WORLDS[activeWorldId].emoji+' '+WORLDS[activeWorldId].name});
+  profile.allScores.sort((a,b)=>b.score-a.score);
+  if(profile.allScores.length>10) profile.allScores=profile.allScores.slice(0,10);
+  profile.totalSessions=(profile.totalSessions||0)+1;
+  saveProfile(profile);
+
+  // Populate results screen
+  populateResults(pct, sessionEntry, wData);
+
+  if(sessionUnlockedWorld!==null){
+    snd('world_unlock');
+    startShootout(sessionUnlockedWorld);
+  } else {
+    if(passed) snd('star_earned');
+    else if(pct>=70) snd('session_end_good');
+    else snd('session_end_bad');
+    showScreen('screen-results');
+    if(pct>=70) launchConfetti();
+  }
+}
+
+function populateResults(pct, entry, wData){
+  const stars=pct>=90?'⭐⭐⭐':pct>=70?'⭐⭐':'⭐';
+  const title=pct>=90?'CHAMPION! 🏆':pct>=80?'Star Earned! ⭐':pct>=70?'Great Game! 🦖':'Good Try! 💪';
+  const trophy=pct>=90?'🏆':pct>=80?'⭐':pct>=70?'🥈':'🎖️';
+  document.getElementById('res-trophy').textContent=trophy;
+  document.getElementById('result-title').textContent=title;
+  document.getElementById('stars-row').textContent=stars;
+  document.getElementById('res-score').textContent=score;
+  document.getElementById('res-correct').textContent=correctCount+' / '+totalQuestions;
+  document.getElementById('res-wrong').textContent=wrongCount;
+  document.getElementById('res-pct').textContent=pct+'%';
+  document.getElementById('res-speed').textContent=entry.avgSpeed?entry.avgSpeed+'s':'—';
+  document.getElementById('res-streak').textContent=bestStreak;
+  document.getElementById('res-add').textContent=addTotal>0?addCorrect+'/'+addTotal:'N/A';
+  document.getElementById('res-sub').textContent=subTotal>0?subCorrect+'/'+subTotal:'N/A';
+
+  // World progress
+  const w=WORLDS[activeWorldId];
+  document.getElementById('wps-title').textContent=w.emoji+' Progress at '+w.name;
+  const starsHtml=starsDisplay(wData.stars);
+  document.getElementById('wps-stars').innerHTML=`<span style="font-size:2rem;">${starsHtml}</span>`;
+  const remaining=3-wData.stars;
+  document.getElementById('wps-sub').textContent=
+    wData.stars>=3?'🎉 All stars earned! Next world unlocked!'
+    :`${remaining} more ⭐ star${remaining!==1?'s':''} to unlock ${activeWorldId<WORLDS.length-1?WORLDS[activeWorldId+1].name:'the final world!'}`;
+
+  renderLeaderboard('mini-leaderboard',5);
+
+  // Update results buttons based on unlock state
+  const btnRow = document.getElementById('results-btn-row');
+  if (sessionUnlockedWorld !== null) {
+    const nextWorld = WORLDS[sessionUnlockedWorld];
+    btnRow.innerHTML = `
+      <button class="btn btn-green" onclick="activeWorldId=${sessionUnlockedWorld};showWorldPlay(${sessionUnlockedWorld})">🚀 Play ${nextWorld.name}!</button>
+      <button class="btn btn-ghost" onclick="showScreen('screen-map')">🗺️ World Map</button>`;
+  } else {
+    btnRow.innerHTML = `
+      <button class="btn" onclick="replayWorld()">Play Again! 🦕</button>
+      <button class="btn btn-ghost" onclick="showScreen('screen-map')">World Map 🗺️</button>`;
+  }
+}
+
+// ══════════════════════════════════════
+// PENALTY SHOOTOUT (world unlock)
+// ══════════════════════════════════════
+function startShootout(newWorldId){
+  const world=WORLDS[newWorldId];
+  const prevWorld=WORLDS[newWorldId-1];
+  showScreen('screen-shootout');
+
+  // Theme the background
+  const bg=document.getElementById('shootout-bg');
+  bg.style.background=`linear-gradient(180deg,${prevWorld.bg[0]} 0%,${prevWorld.bg[1]} 52%,#2d8a2d 52%,#1a5c1a 100%)`;
+
+  // Build crowd
+  const crowd=document.getElementById('crowd');
+  const people=['👦','👧','👨','👩','🧑','👴','👵','🙋','🎉','⚽','🏆','🌟'];
+  crowd.innerHTML='';
+  for(let row=0;row<2;row++){
+    const r=document.createElement('div'); r.className='crowd-row';
+    for(let i=0;i<32;i++) r.innerHTML+=`<span class="crowd-person">${pick(people)}</span>`;
+    crowd.appendChild(r);
+  }
+
+  document.getElementById('shootout-title').textContent='🔓 WORLD UNLOCKED! 🔓';
+  document.getElementById('shootout-subtitle').textContent=`You mastered ${prevWorld.name}!`;
+  document.getElementById('unlock-badge').textContent=`🚀 ${world.name} is now open!`;
+  document.getElementById('shootout-msg').textContent='';
+  document.getElementById('shootout-msg').className='shootout-msg';
+  document.getElementById('pick-instruction').style.display='block';
+  document.getElementById('shootout-btns').style.display='none';
+  document.getElementById('trophy-reveal').style.display='none';
+
+  // Set world-themed goalie
+  const goalie=document.getElementById('goalie');
+  goalie.style.cssText='position:absolute;bottom:4px;left:50%;transform:translateX(-50%);font-size:min(6rem,11vw);line-height:1;transition:all .4s cubic-bezier(.175,.885,.32,1.275);filter:drop-shadow(0 6px 12px rgba(0,0,0,.5));z-index:5;';
+  goalie.textContent=prevWorld.goalie;
+
+  const ball=document.getElementById('ball');
+  ball.style.cssText='position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);font-size:min(3rem,5.5vw);line-height:1;transition:none;filter:drop-shadow(0 4px 8px rgba(0,0,0,.4));z-index:6;';
+
+  document.getElementById('kicker-dino').textContent='🦕';
+  document.getElementById('goal-zones').className='goal-zones picking';
+
+  // Store for trophy reveal
+  document.getElementById('trophy-big').textContent=prevWorld.trophy;
+  document.getElementById('trophy-label').textContent=prevWorld.trophyName+'!';
+}
+
+const zonePositions=[[15,75],[50,75],[85,75],[15,20],[50,20],[85,20]];
+
+function pickZone(zoneIdx){
+  const zones=document.getElementById('goal-zones');
+  if(!zones.classList.contains('picking')) return;
+  zones.className='goal-zones locked';
+  document.getElementById('pick-instruction').style.display='none';
+
+  const [bLeft,bBottom]=zonePositions[zoneIdx];
+  const ball=document.getElementById('ball');
+  const goalie=document.getElementById('goalie');
+  const kicker=document.getElementById('kicker-dino');
+  const msg=document.getElementById('shootout-msg');
+
+  kicker.classList.add('kick');
+  setTimeout(()=>kicker.classList.remove('kick'),600);
+  snd('kick_whoosh');
+
+  setTimeout(()=>{
+    ball.style.transition='all .45s cubic-bezier(.25,.46,.45,.94)';
+    ball.style.left=bLeft+'%'; ball.style.bottom=bBottom+'%';
+    ball.style.fontSize='min(2rem,3.5vw)'; ball.style.transform='translateX(-50%) rotate(360deg)';
+  },200);
+
+  // Goalie dives: 35% chance to block
+  const blocks=Math.random()<0.35;
+  const goalieDest=blocks?bLeft:pick([15,50,85].filter(x=>Math.abs(x-bLeft)>15));
+  setTimeout(()=>{
+    goalie.style.left=goalieDest+'%';
+    goalie.style.bottom=bBottom>50?'65%':'3px';
+    goalie.style.transform='translateX(-50%)'+(bLeft<40?' rotate(-20deg)':bLeft>60?' rotate(20deg)':'');
+  },300);
+
+  setTimeout(()=>{
+    if(!blocks){
+      msg.className='shootout-msg goal';
+      msg.textContent='⚽ GOOOAAAAL! 🎉 WORLD UNLOCKED!';
+      snd('goal');
+      launchConfetti();
+      document.getElementById('crowd').style.animationDuration='.3s';
+    } else {
+      msg.className='shootout-msg saved';
+      msg.textContent="🧤 Saved! But you still unlocked the world! 🌟";
+      snd('saved');
+      launchConfetti();
+    }
+    // Show trophy after 600ms more
+    setTimeout(()=>{
+      document.getElementById('trophy-reveal').style.display='flex';
+      snd('trophy');
+    },600);
+    // Label the button with the new world name
+    const nextWorld = WORLDS[sessionUnlockedWorld];
+    document.getElementById('shootout-continue-btn').textContent =
+      '🚀 Play ' + (nextWorld ? nextWorld.name : 'Next World') + '!';
+    document.getElementById('shootout-btns').style.display='flex';
+  },1000);
+}
+
+function afterShootout(){
+  // Land directly on the newly unlocked world's play screen, ready to go
+  activeWorldId = sessionUnlockedWorld;
+  showWorldPlay(activeWorldId);
+}
+
+// ══════════════════════════════════════
+// LEADERBOARD
+// ══════════════════════════════════════
+const MEDALS=['🥇','🥈','🥉','4️⃣','5️⃣'];
+const MEDAL_CLASSES=['gold-row','silver-row','bronze-row','',''];
+
+function renderLeaderboard(elId,limit){
+  const el=document.getElementById(elId);
+  const scores=profile.allScores.slice(0,limit);
+  if(scores.length===0){ el.innerHTML='<div class="lb-empty">No scores yet — play! 🦕</div>'; return; }
+  el.innerHTML=scores.map((s,i)=>`
+    <div class="lb-row ${MEDAL_CLASSES[i]||''}">
+      <span class="lb-medal">${MEDALS[i]||'🔹'}</span>
+      <span class="lb-score">${s.score}</span>
+      <span class="lb-world">${s.world}</span>
+      <span class="lb-date">${s.date} · ${s.pct}%</span>
+    </div>`).join('');
+}
+
+// ══════════════════════════════════════
+// PARENT REPORT
+// ══════════════════════════════════════
+function showParentReport(){
+  const now=new Date().toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+  document.getElementById('parent-date').textContent='Generated: '+now;
+
+  const allSessions=WORLDS.flatMap((w,i)=>profile.worlds[i].sessions.map(s=>({...s,worldName:w.name})));
+  const recent=allSessions.slice(-10);
+  const totalSess=allSessions.length;
+  const avgAcc=totalSess>0?Math.round(allSessions.reduce((s,e)=>s+e.pct,0)/totalSess):0;
+
+  // Addition vs subtraction accuracy from recent sessions
+  const addSessions=recent.filter(s=>s.addAcc!==null);
+  const subSessions=recent.filter(s=>s.subAcc!==null);
+  const avgAdd=addSessions.length>0?Math.round(addSessions.reduce((s,e)=>s+e.addAcc,0)/addSessions.length):null;
+  const avgSub=subSessions.length>0?Math.round(subSessions.reduce((s,e)=>s+e.subAcc,0)/subSessions.length):null;
+
+  // Speed trend
+  const speedSessions=recent.filter(s=>s.avgSpeed);
+  const avgSpeed=speedSessions.length>0?(speedSessions.reduce((s,e)=>s+parseFloat(e.avgSpeed),0)/speedSessions.length).toFixed(1):null;
+
+  // Watch-out areas
+  const watchouts=[];
+  if(avgSub!==null && avgAdd!==null && avgSub<avgAdd-15) watchouts.push(`<strong>Subtraction</strong> accuracy (${avgSub}%) is lagging behind addition (${avgAdd}%). Try practicing subtraction at a comfortable number range first.`);
+  if(avgAdd!==null && avgAdd<70) watchouts.push(`<strong>Addition accuracy</strong> is at ${avgAdd}% recently — still building confidence. Current world may be slightly challenging.`);
+  if(avgSub!==null && avgSub<70) watchouts.push(`<strong>Subtraction accuracy</strong> is at ${avgSub}% recently — consider spending more time at ${WORLDS[activeWorldId>0?activeWorldId-1:0].name}.`);
+  if(avgSpeed!==null && parseFloat(avgSpeed)>20) watchouts.push(`<strong>Average response time</strong> is ${avgSpeed}s — this is normal for this stage, but look for improvement over the next few sessions.`);
+  if(watchouts.length===0) watchouts.push(`<strong>Looking great!</strong> No major concerns right now. Orion is progressing well.`);
+
+  // Accuracy trend bars
+  const trendData=allSessions.slice(-7);
+  const trendBars=trendData.length>0?`
+    <div class="trend-bar-wrap">
+      ${trendData.map(s=>{
+        const h=Math.round((s.pct/100)*56)+4;
+        return `<div class="trend-bar-col"><div class="trend-bar ${s.pct<80?'below':''}" style="height:${h}px"></div><div class="trend-num">${s.pct}%</div></div>`;
+      }).join('')}
+    </div>
+  `:'<div style="color:#ccc;font-size:.85rem;">Play a few games to see trend data.</div>';
+
+  // World progress rows
+  const worldRows=WORLDS.map((w,i)=>{
+    const wd=profile.worlds[i];
+    if(!wd.unlocked) return `<div class="world-progress-row"><span class="wpr-icon">🔒</span><span class="wpr-name">${w.name}</span><span class="wpr-stars" style="color:#ddd;">☆☆☆</span></div>`;
+    const sess=wd.sessions.length;
+    const qual=wd.sessions.filter(s=>s.pct>=80).length;
+    return `<div class="world-progress-row">
+      <span class="wpr-icon">${w.emoji}</span>
+      <span class="wpr-name">${w.name}</span>
+      <span class="wpr-stars">${starsDisplay(wd.stars)}</span>
+      <span class="wpr-sessions">${sess} session${sess!==1?'s':''}, ${qual} ≥80%</span>
+    </div>`;
+  }).join('');
+
+  document.getElementById('parent-content').innerHTML=`
+    <div class="report-section">
+      <div class="report-section-title">📊 Overview</div>
+      <div class="report-row"><span class="report-label">Total Sessions Played</span><span class="report-value">${totalSess}</span></div>
+      <div class="report-row"><span class="report-label">Overall Average Accuracy</span><span class="report-value">${avgAcc}%</span></div>
+      <div class="report-row"><span class="report-label">Current World</span><span class="report-value">${WORLDS[profile.currentWorld].emoji} ${WORLDS[profile.currentWorld].name}</span></div>
+      <div class="report-row"><span class="report-label">Recent Addition Accuracy</span><span class="report-value">${avgAdd!==null?avgAdd+'%':'Not enough data'}</span></div>
+      <div class="report-row"><span class="report-label">Recent Subtraction Accuracy</span><span class="report-value">${avgSub!==null?avgSub+'%':'Not enough data'}</span></div>
+      <div class="report-row"><span class="report-label">Average Speed (recent)</span><span class="report-value">${avgSpeed?avgSpeed+'s':'Not enough data'}</span></div>
+    </div>
+
+    <div class="report-section">
+      <div class="report-section-title">📈 Accuracy Trend (last ${trendData.length} sessions)</div>
+      <div style="font-size:.75rem;color:#aaa;margin-bottom:5px;">Green = 80%+, Red = below 80%</div>
+      ${trendBars}
+    </div>
+
+    <div class="report-section">
+      <div class="report-section-title">🗺️ World Progress</div>
+      ${worldRows}
+    </div>
+
+    <div class="report-section">
+      <div class="report-section-title">⚠️ Things to Watch</div>
+      ${watchouts.map(w=>`<div class="watchout-item">${w}</div>`).join('')}
+    </div>
+
+    <div class="report-section">
+      <div class="report-section-title">💡 Tip for Next Session</div>
+      <div class="watchout-item" style="border-left-color:#2ecc71;background:#f0fff4;">
+        ${getTip(avgAdd,avgSub,profile.currentWorld)}
+      </div>
+    </div>
+
+    <div class="report-section">
+      <div class="report-section-title">⚙️ Parent Settings</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <button onclick="changePIN()" style="font-family:'Fredoka One',cursive;font-size:.95rem;padding:10px 18px;background:#f0f8ff;border:2px solid #bde;border-radius:10px;cursor:pointer;color:#0984e3;">🔑 Change PIN</button>
+        <button onclick="resetAllData()" style="font-family:'Fredoka One',cursive;font-size:.95rem;padding:10px 18px;background:#fff0f0;border:2px solid #fcc;border-radius:10px;cursor:pointer;color:#e74c3c;">🗑️ Reset All Data</button>
+      </div>
+      <div style="font-size:.75rem;color:#aaa;margin-top:8px;font-weight:700;">Current PIN: ${getParentPIN()} · Reset All Data permanently erases progress.</div>
+    </div>
+  `;
+  showScreen('screen-parent');
+}
+
+function getTip(addAcc,subAcc,worldId){
+  if(subAcc!==null&&addAcc!==null&&subAcc<addAcc-20) return `Focus on subtraction this session — Orion clearly has addition down and is ready to strengthen subtraction at ${WORLDS[worldId].name}.`;
+  if(worldId>0&&addAcc!==null&&addAcc>=90&&subAcc!==null&&subAcc>=90) return `Orion is performing extremely well here! Spend a session or two building consistency, then the next world will unlock.`;
+  if(worldId===0) return `Great place to start! Encourage Orion to try to beat his accuracy record each session. Even 1% improvement is worth celebrating.`;
+  return `Keep building consistency at ${WORLDS[worldId].name}. Encourage Orion to notice when he switches between + and − — that switching is the real skill being trained!`;
+}
+
+// ══════════════════════════════════════
+// CONFETTI
+// ══════════════════════════════════════
+function launchConfetti(){
+  const colors=['#f1c40f','#2ecc71','#e74c3c','#3498db','#9b59b6','#1abc9c','#fff'];
+  for(let i=0;i<80;i++){
+    const el=document.createElement('div');
+    el.className='confetti-piece';
+    el.style.cssText=`left:${Math.random()*100}vw;top:-20px;background:${pick(colors)};width:${Math.random()*10+6}px;height:${Math.random()*10+6}px;animation-duration:${Math.random()*2+1.5}s;animation-delay:${Math.random()*1.5}s;border-radius:${Math.random()>.5?'50%':'2px'};`;
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),5000);
+  }
+}
+
+// ══════════════════════════════════════
+// UTILS
+// ══════════════════════════════════════
+function rand(min,max){ return Math.floor(Math.random()*(max-min+1))+min; }
+function pick(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+
+// Keyboard support
+document.addEventListener('keydown',e=>{
+  if(!document.getElementById('screen-game').classList.contains('active')) return;
+  if(e.key>='0'&&e.key<='9') numPress(e.key);
+  else if(e.key==='Backspace') numPress('del');
+  else if(e.key==='Enter') submitAnswer();
+});
+
+// Numpad
+function numPress(val){
+  const inp=document.getElementById('answer-input');
+  if(val==='del') { inp.value=inp.value.slice(0,-1); snd('tap'); }
+  else { if(inp.value.length>=4) return; inp.value+=val; snd('numpad'); }
+}
+
+// ══════════════════════════════════════
+// PIN / PARENT ACCESS
+// ══════════════════════════════════════
+let pinEntry = '';
+const DEFAULT_PIN = '1234';
+
+function getParentPIN() {
+  return localStorage.getItem('dinoMathPIN') || DEFAULT_PIN;
+}
+
+function promptParentPIN() {
+  pinEntry = '';
+  updatePinDots();
+  document.getElementById('pin-error').textContent = '';
+  document.getElementById('pin-modal').style.display = 'flex';
+}
+
+function closePinModal() {
+  pinEntry = '';
+  updatePinDots();
+  document.getElementById('pin-modal').style.display = 'none';
+}
+
+function pinPress(val) {
+  if (val === 'del') {
+    pinEntry = pinEntry.slice(0, -1);
+  } else {
+    if (pinEntry.length >= 4) return;
+    pinEntry += val;
+  }
+  updatePinDots();
+  if (pinEntry.length === 4) {
+    setTimeout(() => {
+      if (pinEntry === getParentPIN()) {
+        closePinModal();
+        showParentReport();
+      } else {
+        document.getElementById('pin-error').textContent = 'Wrong PIN — try again!';
+        pinEntry = '';
+        updatePinDots();
+      }
+    }, 200);
+  }
+}
+
+function updatePinDots() {
+  for (let i = 0; i < 4; i++) {
+    const dot = document.getElementById('pd-' + i);
+    dot.style.background = i < pinEntry.length ? '#1a9fd4' : 'transparent';
+    dot.style.borderColor = i < pinEntry.length ? '#1a9fd4' : '#ddd';
+  }
+}
+
+function changePIN() {
+  document.getElementById('change-pin-modal').style.display = 'flex';
+  document.getElementById('new-pin-entry').value = '';
+  document.getElementById('new-pin-error').textContent = '';
+}
+
+function confirmChangePIN() {
+  const val = document.getElementById('new-pin-entry').value;
+  if (!/^\d{4}$/.test(val)) {
+    document.getElementById('new-pin-error').textContent = 'Must be exactly 4 digits!';
+    return;
+  }
+  localStorage.setItem('dinoMathPIN', val);
+  document.getElementById('change-pin-modal').style.display = 'none';
+  const t = document.getElementById('level-toast');
+  t.textContent = '✅ PIN changed to ' + val;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+function cancelChangePIN() {
+  document.getElementById('change-pin-modal').style.display = 'none';
+}
+
+function resetAllData() {
+  document.getElementById('confirm-modal').style.display = 'flex';
+}
+
+function confirmReset() {
+  document.getElementById('confirm-modal').style.display = 'none';
+  localStorage.removeItem('dinoMathV4');
+  localStorage.removeItem('dinoMathPIN');
+  profile = getProfile();
+  showScreen('screen-title');
+  const t = document.getElementById('level-toast');
+  t.textContent = '✅ All data cleared!';
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+function cancelReset() {
+  document.getElementById('confirm-modal').style.display = 'none';
+}
+
+
+// Build map when that screen is shown
+document.getElementById('screen-map').addEventListener('transitionend',()=>{});
+const origShowScreen=showScreen;
+window.showScreen=function(id){
+  origShowScreen(id);
+  if(id==='screen-map') buildMap();
+  if(id==='screen-scores'){
+    renderLeaderboard('full-leaderboard',10);
+  }
+};
+
+// Auto-scroll map to current world on first load
+window.showScreen=function(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  if(id==='screen-map') setTimeout(buildMap,50);
+  if(id==='screen-scores') renderLeaderboard('full-leaderboard',10);
+};
+
+// Initialise sound state on load
+initSound();
+</script>
+</body>
+</html>
